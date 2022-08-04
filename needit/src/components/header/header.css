@@ -1,0 +1,19 @@
+.navBar_wrapper{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%
+    
+}
+.main_logo{
+    width: 150px;
+}
+/* .app_name{
+    font-size: 2em;
+} */
+.searchBar{
+    width: 60%;
+    box-shadow: 2px;
+    border-radius: 20%;
+
+}
