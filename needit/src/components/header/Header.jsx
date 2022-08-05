@@ -13,7 +13,7 @@ function Header() {
         </div>
         <div>
         {/* <div className='app_name'><p>Need It?</p></div> */}
-         <div>
+         <div className='searchBarDiv'>
           <input className='searchBar' type="text" />
           <input type="button" />
          </div>
