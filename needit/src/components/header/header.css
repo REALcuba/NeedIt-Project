@@ -2,7 +2,8 @@
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%
+    width: 100%;
+    background-color: rgb(209, 244, 233)
     
 }
 .main_logo{
@@ -11,9 +12,13 @@
 /* .app_name{
     font-size: 2em;
 } */
-.searchBarDiv{
-    width: 60%;
-    box-shadow: 2px;
-    border-radius: 20%;
+.searchBarDiv{  
+    width: 50%;
 
+}
+.searchBar{
+    width: 100%;
+}
+.searchBarBt{
+    background-color: greenyellow;
 }
