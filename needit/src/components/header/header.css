@@ -22,3 +22,9 @@
 .searchBarBt{
     background-color: greenyellow;
 }
+
+.loginBt{
+    border-radius: 20%;
+    color: aqua;
+    background-color: black;
+}

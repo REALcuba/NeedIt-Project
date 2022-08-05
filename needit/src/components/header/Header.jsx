@@ -4,6 +4,7 @@ import "./header.css";
 import main_logo from "../../img/main_logo.png";
 
 import Login from '../Login/Login';
+import SignUp from "../SignUp/SignUp"
 
 function Header() {
   return (
@@ -20,7 +21,10 @@ function Header() {
          </div>
 
         </div>
+        <div className=''>
         <div className='menu'> <Login/></div>
+        <div className='menu'> <SignUp/></div>
+        </div>
        </div>
     </div>
   )
