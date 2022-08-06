@@ -1,6 +1,9 @@
 import logo from "./img/globe-recycling-icon-recycling-earth.png";
 import "./App.css";
+
+// components
 import Header from "./components/Header/Header";
+import Carousel from "./components/Carousel/Carousel";
 
 function App() {
   return (
@@ -17,6 +20,7 @@ function App() {
         >
           Need It ?
         </a>
+        <Carousel />
       </header>
       {/* <footer/> */}
     </div>
