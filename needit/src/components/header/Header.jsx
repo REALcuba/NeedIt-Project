@@ -3,6 +3,8 @@ import React from 'react'
 import "./header.css";
 import main_logo from "../../img/main_logo.png";
 
+import Login from '../Login/Login';
+import SignUp from "../SignUp/SignUp"
 
 function Header() {
   return (
@@ -11,15 +13,18 @@ function Header() {
         <div className='logo'>
           <img src={main_logo} className="main_logo" alt="logo" />
         </div>
-        <div>
+        <div className='searchBarDiv'>
         {/* <div className='app_name'><p>Need It?</p></div> */}
-         <div className='searchBarDiv'>
+         <div >
           <input className='searchBar' type="text" />
-          <input type="button" />
+          <input type="button" className="searchBarBt" value="search" />
          </div>
 
         </div>
-        <div className='menu'><p>menu</p></div>
+        <div className=''>
+        <div className='menu'> <Login/></div>
+        <div className='menu'> <SignUp/></div>
+        </div>
        </div>
     </div>
   )
