@@ -5,6 +5,7 @@ import main_logo from "../../img/main_logo.png";
 
 import Login from '../LoginBtn/Login';
 import SignUp from "../SignUpBtn/SignUp"
+import MenuBtn from '../MenuBtn/MenuBtn';
 
 function Header() {
   return (
@@ -22,8 +23,9 @@ function Header() {
 
         </div>
         <div className=''>
-        <div className='menu'> <Login/></div>
-        <div className='menu'> <SignUp/></div>
+        <div className='menuBtn'> <Login/></div>
+        <div className='menuBtn'> <SignUp/></div>
+        <div className='menuBtn'> <MenuBtn/></div>
         </div>
        </div>
     </div>
