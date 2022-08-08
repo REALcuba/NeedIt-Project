@@ -3,8 +3,8 @@ import React from 'react'
 import "./header.css";
 import main_logo from "../../img/main_logo.png";
 
-import Login from '../Login/Login';
-import SignUp from "../SignUp/SignUp"
+import Login from '../LoginBtn/Login';
+import SignUp from "../SignUpBtn/SignUp"
 
 function Header() {
   return (
@@ -17,7 +17,7 @@ function Header() {
         {/* <div className='app_name'><p>Need It?</p></div> */}
          <div >
           <input className='searchBar' type="text" />
-          <input type="button" className="searchBarBt" value="search" />
+          <input type="submit" className="searchBarBtn" value="search" />
          </div>
 
         </div>

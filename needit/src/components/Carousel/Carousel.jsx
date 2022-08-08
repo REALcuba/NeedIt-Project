@@ -1,16 +1,16 @@
-import React ,{useState} from 'react';
+import React from 'react';
 
 import "./carousel.css";
+import Slider from './Slider/Slider';
 
 function Carousel() {
   return (
     <div className='carousel_wrapper'>
         <div>
-
-        Categories
+       <h1>Categories</h1> 
         </div>
         <div>
-         Carousel
+         <Slider/>
         </div>
     </div>
   )
