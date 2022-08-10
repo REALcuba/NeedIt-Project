@@ -4,6 +4,7 @@ import "./App.css";
 // components
 import Header from "./components/Header/Header";
 import Carousel from "./components/Carousel/Carousel";
+import TestCarousel from "./components/Carousel/TestCarousel/TestCarousel";
 
 function App() {
   return (
@@ -14,13 +15,14 @@ function App() {
 
         <a
           className="App-link"
-          href="#"
+          href="migracode"
           target="_blank"
           rel="noopener noreferrer"
         >
           Need It ?
         </a>
         <Carousel />
+        <TestCarousel />
       </header>
       {/* <footer/> */}
     </div>

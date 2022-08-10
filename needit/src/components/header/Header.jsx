@@ -17,7 +17,7 @@ function Header() {
         <div className='searchBarDiv'>
         {/* <div className='app_name'><p>Need It?</p></div> */}
          <div >
-          <input className='searchBar' type="text" />
+          <input className='searchBar' type="text" placeholder='search'/>
           <input type="submit" className="searchBarBtn" value="search" />
          </div>
 
