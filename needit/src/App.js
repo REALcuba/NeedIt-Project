@@ -1,9 +1,14 @@
-import logo from './img/globe-recycling-icon-recycling-earth.png';
-import './App.css';
+import logo from "./img/globe-recycling-icon-recycling-earth.png";
+import "./App.css";
+
+// components
+import Header from "./components/header/Header.jsx";
+import Carousel from "./components/Carousel/Carousel";
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
@@ -15,7 +20,9 @@ function App() {
         >
           Need It ?
         </a>
+        <Carousel />
       </header>
+      {/* <footer/> */}
     </div>
   );
 }
