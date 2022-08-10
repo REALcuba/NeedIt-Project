@@ -1,4 +1,4 @@
-import logo from "./img/globe-recycling-icon-recycling-earth.png";
+import logo from "./img/NeedIt.gif";
 import "./App.css";
 
 // components
@@ -18,7 +18,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Need It ?
+        
         </a>
         <Carousel />
       </header>
