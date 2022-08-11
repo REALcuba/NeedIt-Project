@@ -5,7 +5,7 @@ import "./App.css";
 // components
 import Header from "./components/Header/Header.jsx";
 import Carousel from "./components/ProductSlider/ProductSlider";
-import TestCarousel from "./components/CathegoriesSlider/CathegoriesSlider";
+import TestCarousel from "./components/CathegoriesSlider/CategoriesSlider";
 
 function App() {
   return (

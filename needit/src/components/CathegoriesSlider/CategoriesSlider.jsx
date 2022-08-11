@@ -6,8 +6,8 @@ import dataSlider from "../ProductSlider/Slider/dataSlider";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-import "./cathegoriesSlider.css"; 
-export default function CathegorieSlider () {
+import "./categoriesSlider.css"; 
+export default function CategorieSlider () {
   
     const settings = {
       dots: true,
@@ -20,7 +20,7 @@ export default function CathegorieSlider () {
     };
     return (
       <div>
-        <h2>Cathegories</h2>
+        <h2>Categories</h2>
         <Slider {...settings}>
             {dataSlider.map((item) => (
         
