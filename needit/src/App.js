@@ -2,7 +2,7 @@ import logo from "./img/globe-recycling-icon-recycling-earth.png";
 import "./App.css";
 
 // components
-import Header from "./components/Header/Header";
+import Header from "./components/Header/Header.jsx";
 import Carousel from "./components/Carousel/Carousel";
 import TestCarousel from "./components/Carousel/TestCarousel/TestCarousel";
 
