@@ -17,13 +17,13 @@ function Header() {
         <div className="searchBarDiv">
           {/* <div className='app_name'><p>Need It?</p></div> */}
           <div>
-            <input className="searchBar" type="text" />
+            <input className="searchBar" type="text" placeholder="Search" />
             <input type="submit" className="Btn" value="search" />
           </div>
         </div>
         <div className="navBar">
-          <i> Menu</i>
-          <i>Login</i>
+          <i><MenuBtn/></i>
+          <i><Login/></i>
           <input type="button" className="Btn" value="Sign Up" />
         </div>
       </div>
