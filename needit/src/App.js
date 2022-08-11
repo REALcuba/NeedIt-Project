@@ -3,8 +3,8 @@ import "./App.css";
 
 // components
 import Header from "./components/Header/Header.jsx";
-import Carousel from "./components/Carousel/Carousel";
-import TestCarousel from "./components/Carousel/TestCarousel/TestCarousel";
+import Carousel from "./components/ProductSlider/ProductSlider";
+import TestCarousel from "./components/CathegoriesSlider/CathegoriesSlider";
 
 function App() {
   return (
@@ -13,14 +13,6 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
-        <a
-          className="App-link"
-          href="migracode"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        
-        </a>
         <Carousel />
         <TestCarousel />
       </header>

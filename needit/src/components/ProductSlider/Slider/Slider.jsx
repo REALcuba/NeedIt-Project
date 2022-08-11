@@ -6,6 +6,9 @@ import  "./slider.css";
 import dataSlider from "./dataSlider";
 import BtnSlider from "./BtnSlider";
 
+//import product slider img
+import furniture from "../img/furniture.jpeg"
+
 export default function Slider() {
 
   const[slideIndex, setSlideIndex] = useState(1)
@@ -34,7 +37,7 @@ if (slideIndex !== 1) {
                     className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
                          >
                         <img 
-                        src={'../../../img/istockphoto-1208657520-612x612.jpeg'}
+                        src={furniture}
                         alt=""
                         />
                     </div>)
