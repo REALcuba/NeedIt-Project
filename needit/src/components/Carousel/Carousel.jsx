@@ -1,7 +1,7 @@
 import React from 'react';
 
 import "./carousel.css";
-import Slider from './Slider/slider';
+import Slider from './Slider/Slider';
 
 function Carousel() {
   return (
