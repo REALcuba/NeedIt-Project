@@ -22,8 +22,8 @@ function Header() {
           </div>
         </div>
         <div className="navBar">
-          <i> Menu</i>
-          <i>Login</i>
+          <i><MenuBtn/></i>
+          <i><Login/></i>
           <input type="button" className="Btn" value="Sign Up" />
         </div>
       </div>

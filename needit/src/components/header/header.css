@@ -41,7 +41,7 @@
   padding: 20px;
   margin-right: 5px;
 }
-.navBar i {
+.navBar .loginBtn {
   font-size: 20px;
   color: #1d6868;
   font-weight: bold;
