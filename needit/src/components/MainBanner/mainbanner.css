@@ -1,0 +1,16 @@
+.logo-container{
+    background-color: white;
+}
+
+.main-banner {
+    background-color: #56c9b6;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color:black;
+    padding: 0 100px;
+
+  }
+  
