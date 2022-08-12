@@ -7,9 +7,7 @@ function Carousel() {
   return (
     <div className='carousel_wrapper'>
        <h1>Categories</h1> 
-        <div>
          <Slider/>
-        </div>
     </div>
   )
 }
