@@ -6,8 +6,8 @@ import Slider from './Slider/slider';
 function Carousel() {
   return (
     <div className='carousel_wrapper'>
-       <h1>Categories</h1> 
-         <Slider/>
+       <Slider/>
+       <h1>Categories</h1>  
     </div>
   )
 }

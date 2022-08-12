@@ -34,8 +34,7 @@ if (slideIndex !== 1) {
                     className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
                          >
                         <img 
-                        src={'../../../img/istockphoto-1208657520-612x612.jpeg'}
-                        alt=""
+                        src={obj.picture}alt=""
                         />
                     </div>)
 })}
