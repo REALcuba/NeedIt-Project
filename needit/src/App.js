@@ -1,26 +1,27 @@
 import logo from "./img/NeedIt.gif";
 import "./App.css";
 
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 // components
 import Header from "./components/Header/Header.jsx";
-import Carousel from "./components/ProductSlider/ProductSlider";
-import TestCarousel from "./components/CathegoriesSlider/CategoriesSlider";
+import ProductSlider from "./components/ProductSlider/ProductSlider";
+import CategorieSlider from "./components/CathegoriesSlider/CategoriesSlider";
 
 function App() {
   return (
     <div className="App">
-      <header>
+      
         <Header />
-      </header>
-      <body>
+      
         <section className="body-product">
           <img src={logo} className="App-logo" alt="logo" />
 
-          <Carousel />
+          <ProductSlider />
         </section>
-        <TestCarousel />
-      </body>
+        <CategorieSlider />
+     
+        
       {/* <footer/> */}
     </div>
   );
