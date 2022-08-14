@@ -17,13 +17,7 @@
   width: 50%;
   margin-left: 30px;
 }
-.searchBar {
-  width: 361px;
-  height: 45px;
-  border-radius: 30px;
-  border: none;
-  outline: none;
-}
+
 .Btn {
   width: 90px;
   height: 42px;
@@ -32,6 +26,11 @@
   border: none;
   background: #63a4a4;
   cursor: pointer;
+  font-size: 20px;
+  color: #1d6868;
+  font-weight: bold;
+  cursor: pointer;
+  
 }
 .navBar {
   width: 300px;

@@ -18,15 +18,14 @@
 .slick-slider {
    margin: -41px 38px;
     width: 95%;
-    /* width: 382px; */
 }
-.slick-list {
+/* .slick-list {
     
     margin: 0 -10px;
 
-  }
+  } */
  .slick-arrow{
-    background: #ccc;
+    background-color: rgb(85, 43, 43);
     
  }
  .slick-arrow :hover {

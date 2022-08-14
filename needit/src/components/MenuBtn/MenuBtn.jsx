@@ -6,7 +6,7 @@ import menu from "./menu-squared.png"
 function MenuBtn() {
   return (
     <div>
-        <input type="button" className='menuBtn' value="Menu" src={menu}/>
+        <input type="button" className='menuBtn Btn' value="Menu" src={menu}/>
     </div>
   )
 }

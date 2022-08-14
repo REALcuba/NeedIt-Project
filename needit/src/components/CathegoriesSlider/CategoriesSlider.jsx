@@ -5,6 +5,10 @@ import dataSlider from "../ProductSlider/Slider/dataSlider";
 
 
 import "./categoriesSlider.css"; 
+
+
+//using react-slick to create the Slider
+
 export default function CategorieSlider () {
   // function NextArrow(props) {
   //   const { className, style, onClick } = props;
@@ -29,12 +33,14 @@ export default function CategorieSlider () {
   // }
     const settings = { 
       dots: true,
-      // infinite: true,
+      infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
-      autoplay: false,
+      // autoplay: true,
       autoplaySpeed: 2000,
       pauseOnHover: true,
+      // c
+      centerPadding: "60px",
       // nextArrow: <NextArrow />,
       // prevArrow: <PrevArrow />,
         
@@ -50,10 +56,7 @@ export default function CategorieSlider () {
             <h2>{item.name}</h2>
             <img  className="cardImg" src={item.img} alt={item.name} />
             </div>
-
           </div>
-
-
          ))} 
           
         </Slider>

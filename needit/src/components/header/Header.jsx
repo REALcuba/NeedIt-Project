@@ -5,7 +5,7 @@ import main_logo from "../../img/main_logo.png";
 
 import Login from "../LoginBtn/Login";
 import SignUp from "../SignUpBtn/SignUp";
-import MenuBtn from "../MenuBtn/MenuBtn";
+// import MenuBtn from "../MenuBtn/MenuBtn";
 
 function Header() {
   return (
@@ -14,17 +14,11 @@ function Header() {
         <div className="logo">
           <img src={main_logo} className="main_logo" alt="logo" />
         </div>
-        <div className="searchBarDiv">
-          {/* <div className='app_name'><p>Need It?</p></div> */}
-          <div>
-            <input className="searchBar" type="text" placeholder="Search" />
-            <input type="submit" className="Btn" value="search" />
-          </div>
-        </div>
+       
         <div className="navBar">
-          <i><MenuBtn/></i>
+          {/* <i><MenuBtn/></i> */}
           <i><Login/></i>
-          <input type="button" className="Btn" value="Sign Up" />
+          <i><SignUp/></i>
         </div>
       </div>
     </div>
