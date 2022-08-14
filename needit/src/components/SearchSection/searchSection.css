@@ -7,3 +7,7 @@
     justify-content: center;
     flex-direction: column;
 }
+.searchBarDiv {
+    display: flex;
+    justify-content: center;
+  }
