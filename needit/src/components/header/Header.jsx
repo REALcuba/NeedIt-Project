@@ -16,9 +16,10 @@ function Header() {
         </div>
 
         <div className="navBar">
-          <a href="#" className="login">
-            Login
-          </a>
+          <i>
+            <Login />
+          </i>
+
           <i>
             <SignUp />
           </i>
