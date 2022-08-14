@@ -14,11 +14,14 @@ function Header() {
         <div className="logo">
           <img src={main_logo} className="main_logo" alt="logo" />
         </div>
-       
+
         <div className="navBar">
-          {/* <i><MenuBtn/></i> */}
-          <i><Login/></i>
-          <i><SignUp/></i>
+          <a href="#" className="login">
+            Login
+          </a>
+          <i>
+            <SignUp />
+          </i>
         </div>
       </div>
     </div>

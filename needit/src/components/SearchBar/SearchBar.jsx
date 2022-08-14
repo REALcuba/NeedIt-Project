@@ -1,19 +1,23 @@
-import React from 'react'
+import React from "react";
 
 //style
-import "./searchBar.css"
+import "./searchBar.css";
 
 function Searchbar() {
   return (
     <div>
-         <div className="searchBarDiv">
-          <div className='searchBarWrapper'>
-            <input className="searchBar" type="text" placeholder="Search" />
-            <input type="submit" className="Btn" value="search" />
-          </div>
+      <div className="searchBarDiv">
+        <div className="searchBarWrapper">
+          <input
+            className="searchBar"
+            type="text"
+            placeholder="Search here..."
+          />
+          <input type="submit" className="Btn" value="search " />
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Searchbar
+export default Searchbar;

@@ -1,9 +1,29 @@
-.searchSection{
-    color: aquamarine;
-    display: flex;
-    /* height: 50%; */
-    background-image: url('../../img/istockphoto-1208657520-612x612.jpeg');
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
+.searchSection {
+  max-width: 100%;
+  height: 60vh;
+  color: #fff;
+  background-image: url("../../img/istockphoto-1208657520-612x612.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 50px;
+  font-family: sans-serif;
+}
+.searchBarDiv {
+  width: 100%;
+}
+.searchBar {
+  border: none;
+  font-size: 15px;
+  padding-left: 5px;
+}
+.searchSection h1 {
+  font-size: 70px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.searchSection p {
+  font-size: 30px;
 }
