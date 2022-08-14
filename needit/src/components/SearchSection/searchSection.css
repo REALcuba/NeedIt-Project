@@ -1,5 +1,9 @@
 .searchSection{
+    color: aquamarine;
     display: flex;
     /* height: 50%; */
     background-image: url('../../img/istockphoto-1208657520-612x612.jpeg');
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
 }
