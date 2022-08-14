@@ -1,4 +1,5 @@
 .searchSection{
     display: flex;
-    height: 30%;
+    /* height: 50%; */
+    background-image: url('../../img/istockphoto-1208657520-612x612.jpeg');
 }
