@@ -4,7 +4,7 @@
   align-items: center;
   text-align: center;
   background-color: #f5f5f5;
-  padding: 20px;
+  /* padding: 20px; */
 }
 .main_logo {
   width: 100px;
@@ -12,10 +12,6 @@
 /* .app_name{
     font-size: 2em;
 } */
-.searchBarDiv {
-  width: 50%;
-  margin-left: 30px;
-}
 
 .Btn {
   width: 90px;
@@ -30,9 +26,15 @@
   font-weight: bold;
   cursor: pointer;
   font-weight: bold;
+  transition: all 1s;
+}
+.Btn:hover {
+  transform: scale(1.2);
+  color: #1d6868;
+  background-color: #9ba9a5;
 }
 .navBar {
-  width: 300px;
+  /* width: 300px; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -46,4 +48,14 @@
   cursor: pointer;
   color: #1d6868;
   font-weight: bold;
+  margin-right: 8px;
+  border: none;
+}
+.login:hover {
+  transform: scale(1.2);
+  color: #1d6868;
+  background-color: #9ba9a5;
+}
+.logo {
+  padding-left: 20px;
 }

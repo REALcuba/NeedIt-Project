@@ -27,3 +27,7 @@
 .searchSection p {
   font-size: 30px;
 }
+.searchBarDiv {
+    display: flex;
+    justify-content: center;
+  }
