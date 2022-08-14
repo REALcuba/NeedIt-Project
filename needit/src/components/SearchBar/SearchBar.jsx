@@ -5,8 +5,8 @@ import "./searchBar.css"
 
 function Searchbar() {
   return (
-    <div>
-         <div className="searchBarDiv">
+    <div className="searchBarDiv">
+         <div >
           <div className='searchBarWrapper'>
             <input className="searchBar" type="text" placeholder="Search" />
             <input type="submit" className="Btn" value="search" />

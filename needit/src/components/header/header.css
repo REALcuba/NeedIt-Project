@@ -1,11 +1,11 @@
 .navBar_wrapper {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   /* width: 100%; */
   background-color: #f5f5f5;
-  padding: 20px;
+  /* padding: 20px; */
 }
 .main_logo {
   width: 100px;
@@ -13,10 +13,7 @@
 /* .app_name{
     font-size: 2em;
 } */
-.searchBarDiv {
-  width: 50%;
-  margin-left: 30px;
-}
+
 
 .Btn {
   width: 90px;
@@ -33,16 +30,19 @@
   
 }
 .navBar {
-  width: 300px;
+  /* width: 300px; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 20px;
-  margin-right: 5px;
+  /* margin-right: 5px; */
 }
 .navBar .loginBtn {
   font-size: 20px;
   color: #1d6868;
   font-weight: bold;
   cursor: pointer;
+}
+.logo{
+  padding-left: 20px;
 }
