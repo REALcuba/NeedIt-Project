@@ -1,0 +1,9 @@
+.signUpBtn {
+    width: 90px;
+    height: 42px;
+    margin: 5px;
+    border-radius: 20px;
+    border: none;
+    background: #63a4a4;
+    cursor: pointer;
+  }

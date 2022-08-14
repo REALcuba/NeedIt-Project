@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -11,6 +12,7 @@
 
 .body-product  {
   background-color: #56c9b6;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
