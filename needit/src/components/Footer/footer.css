@@ -1,0 +1,17 @@
+.footerDiv{
+    height: 60px;
+    background-color: #ccc;
+}
+.migracodeDiv img {
+width: 60px;
+
+}
+.migracodeLogo{
+    display: flex;
+    justify-content: space-around;
+    width: 144px;
+    text-decoration: none;
+    color: rgb(46, 45, 45);
+    padding-top: 5px;
+
+}

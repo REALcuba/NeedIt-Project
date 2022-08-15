@@ -8,6 +8,7 @@ import Header from "./components/Header/Header.jsx";
 // import ProductSlider from "./components/ProductSlider/ProductSlider";
 import CategorieSlider from "./components/CathegoriesSlider/CategoriesSlider";
 import SearchSection from "./components/SearchSection/SearchSection";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -21,9 +22,9 @@ function App() {
           <ProductSlider />
         </section>
      
-        
-      {/* <footer/> */}
+        */}
         <CategorieSlider /> 
+       <Footer/> 
     </div>
   );
 }

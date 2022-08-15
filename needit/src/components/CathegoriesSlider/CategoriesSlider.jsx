@@ -54,8 +54,8 @@ export default function CategorieSlider () {
           <div className="categorySlider">
             <div className="card">
             <h2>{item.name}</h2>
-            <img  className="cardImg" src={item.img} alt={item.name} />
             </div>
+            <img  className="cardImg" src={item.img} alt={item.name} />
           </div>
          ))} 
           
