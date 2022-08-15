@@ -51,8 +51,8 @@ export default function CategorieSlider () {
         <Slider {...settings}>
              {dataSlider.map((item) => (
         
-          <div className="categorySlider">
-            <div className="card">
+          <div className="categorySlider" key={Slider}>
+            <div className="card" >
             <h2>{item.name}</h2>
             </div>
             <img  className="cardImg" src={item.img} alt={item.name} />
