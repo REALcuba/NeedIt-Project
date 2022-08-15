@@ -1,6 +1,8 @@
 .footerDiv{
-    height: 60px;
+    /* height: 60px; */
+    padding-bottom: 10px;
     background-color: #ccc;
+    background-image: linear-gradient(to top left,#b9ff00, #cccc4b, green)
 }
 .migracodeDiv img {
 width: 60px;
@@ -18,7 +20,8 @@ width: 60px;
 
 .aboutDiv{
     display: flex;
-    padding: 5px 5px;
+    padding: 5px px;
     width: 4em;
+    
 }
 

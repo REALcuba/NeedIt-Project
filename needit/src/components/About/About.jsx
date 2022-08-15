@@ -8,7 +8,7 @@ function About() {
         console.log("about", e);
     }
   return (
-    <div className='aboutDiv footerDiv'>
+    <div className='aboutDiv'>
 
         <i onClick={(e) => handleClick(e)}>About Us</i>
     </div>

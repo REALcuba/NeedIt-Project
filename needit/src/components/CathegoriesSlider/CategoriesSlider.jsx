@@ -39,7 +39,6 @@ export default function CategorieSlider () {
       // autoplay: true,
       autoplaySpeed: 2000,
       pauseOnHover: true,
-      // c
       centerPadding: "60px",
       // nextArrow: <NextArrow />,
       // prevArrow: <PrevArrow />,

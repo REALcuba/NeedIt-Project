@@ -11,7 +11,7 @@ import furniture from "../img/furniture.jpeg"
 
 export default function Slider() {
 
-  const[slideIndex, setSlideIndex] = useState(1)
+  const[slideIndex, setSlideIndex] = useState([1,2,3,])
 
   const nextSlide = () => {
     if(slideIndex !== dataSlider.length){
@@ -32,9 +32,10 @@ if (slideIndex !== 1) {
         <div className="container-slider">
             {dataSlider.map((obj, index) => {
                 return(
-                    <div  
+                    <div 
+                    
                     key={obj.id}
-                    className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
+                    className={slideIndex === obj.id ? "slide active-anim" : "slide"}
                          >
                         <img 
                         src={furniture}

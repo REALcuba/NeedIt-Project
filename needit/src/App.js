@@ -19,10 +19,10 @@ function App() {
         {/* <section className="body-product">
           <img src={logo} className="App-logo" alt="logo" />
 
-          <ProductSlider />
-        </section>
-     
+          </section>
+          
         */}
+        {/* <ProductSlider /> */}
         <CategorieSlider /> 
        <Footer/> 
     </div>
