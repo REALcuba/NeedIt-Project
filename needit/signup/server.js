@@ -45,7 +45,7 @@ app.get("/users/login", (req, res) => {
 
 //rendering dasboard
 app.get("/users/dashboard", (req, res) => {
-  res.render("dashboard", { user: "conor" });
+  res.render("dashboard", { user: "Fatma" });
 });
 
 // POST endpoint for signup
