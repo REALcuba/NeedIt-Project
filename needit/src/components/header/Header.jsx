@@ -3,9 +3,11 @@ import React from "react";
 import "./header.css";
 import main_logo from "../../img/main_logo.png";
 
-import Login from "../LoginBtn/Login";
 import SignUp from "../SignUpBtn/SignUp";
+// import Login from "../Login/Login";
+import LoginBtn from "../LoginBtn/LoginBtn";
 // import MenuBtn from "../MenuBtn/MenuBtn";
+import {Link} from "react-router-dom"
 
 function Header() {
   return (
@@ -16,9 +18,11 @@ function Header() {
         </div>
 
         <div className="navBar">
-          <i>
-            <Login />
-          </i>
+          
+            <Link to="/Auth">
+               <LoginBtn/> 
+               </Link>
+         
 
           <i>
             <SignUp />

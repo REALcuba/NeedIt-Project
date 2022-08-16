@@ -1,5 +1,7 @@
 .categories{
     /* width: 100%; */
+    background-color: white;
+
     height: 352px;
     display: block;
     padding: 0 50px;
