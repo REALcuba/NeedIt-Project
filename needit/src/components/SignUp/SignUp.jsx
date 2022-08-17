@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 
- function Auth (props) {
-  let [authMode, setAuthMode] = useState("signin");
+ function SignUp(props) {
+  let [authMode, setAuthMode] = useState("signup");
 
   const changeAuthMode = () => {
-    setAuthMode(authMode === "signin" ? "signup" : "signin");
+    setAuthMode(authMode === "signup" ? "signin" : "signup");
   };
 
-  if (authMode === "signin") {
+  if (authMode === "signup") {
     return (
       <div className="Auth-form-container">
         <form className="Auth-form">
           <div className="Auth-form-content">
-            <h3 className="Auth-form-title">Login</h3>
+            <h3 className="Auth-form-title">Sign In</h3>
             <div className="text-center">
               Not registered yet?{" "}
               <span className="link-primary" onClick={changeAuthMode}>
@@ -53,11 +53,11 @@ import React, { useState } from "react";
     <div className="Auth-form-container">
       <form className="Auth-form">
         <div className="Auth-form-content">
-          <h3 className="Auth-form-title">Sign Up</h3>
+          <h3 className="Auth-form-title">Sign In</h3>
           <div className="text-center">
             Already registered?{" "}
             <span className="link-primary" onClick={changeAuthMode}>
-              Login
+              Sign In
             </span>
           </div>
           <div className="form-group mt-3">
@@ -99,4 +99,4 @@ import React, { useState } from "react";
 }
 
 
-export default Auth;
+export default SignUp;

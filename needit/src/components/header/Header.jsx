@@ -3,7 +3,7 @@ import React from "react";
 import "./header.css";
 import main_logo from "../../img/main_logo.png";
 
-import SignUp from "../SignUpBtn/SignUp";
+import SignUpBtn from "../SignUpBtn/SignUpBtn";
 // import Login from "../Login/Login";
 import LoginBtn from "../LoginBtn/LoginBtn";
 // import MenuBtn from "../MenuBtn/MenuBtn";
@@ -26,9 +26,11 @@ function Header() {
                </Link>
          
 
-          <i>
-            <SignUp />
-          </i>
+          
+            <Link to="/SignUp">
+            <SignUpBtn />
+            </Link>
+          
         </div>
       </div>
     </div>

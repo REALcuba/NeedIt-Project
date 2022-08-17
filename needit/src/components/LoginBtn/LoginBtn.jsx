@@ -7,12 +7,9 @@ import Login from "../Login/Login"
 function LoginBtn() {
   return (
     <div>
-
-
-
-      {/* <Link to="../Auth/Auth"> */}
+     
       <input type="button" className=" login" value="Login" onClick={Login}/>
-      {/* </Link> */}
+    
     </div>
   );
 }
