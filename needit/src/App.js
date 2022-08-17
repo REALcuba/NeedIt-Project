@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 //boostrap login
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Auth from "./components/Auth/Auth";
-import SignUp from "./components/SignUp/SignUp"
+import SignUp from "./components/SignUp/SignUp";
 // components
 import Header from "./components/Header/Header.jsx";
 // import ProductSlider from "./components/ProductSlider/ProductSlider";
@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path='/app' exact element={<App/>}/>
           <Route path="/auth" element={<Auth />} />
-          <Route path="/SignUp" elemente={<SignUp/>}/>
+          <Route path="/signup" element={<SignUp/>}/>
         </Routes>
       </BrowserRouter>
       <SearchSection />
