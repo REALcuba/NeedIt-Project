@@ -14,7 +14,9 @@ function Header() {
     <div>
       <div className="navBar_wrapper">
         <div className="logo">
-         <Link to="/app"> <img src={main_logo} className="main_logo" alt="logo" /></Link>
+         <Link to="/">
+           <img src={main_logo} className="main_logo" alt="logo" />
+           </Link>
         </div>
 
         <div className="navBar">
