@@ -1,5 +1,6 @@
 const express = require("express");
 const { Pool, Client } = require("pg");
+const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
 
 const PORT = process.env.PORT || 5000;
@@ -49,13 +50,16 @@ app.get("/users/dashboard", (req, res) => {
 });
 
 // POST endpoint for signup
-app.post("/users/register", (req, res) => {
+app.post("/users/register", async (req, res) => {
   const userName = req.body.name;
   const userEmail = req.body.email;
   const userCity = req.body.city;
   const userCountry = req.body.country;
   const usernames = req.body.username;
   const userpassword = req.body.password;
+
+  const hashedPassword = await bcrypt.hash(userpassword, 10);
+  console.log(hashedPassword);
 
   const checkName = "SELECT * FROM signup WHERE name = $1";
   const insertNewUsers =
@@ -73,6 +77,7 @@ app.post("/users/register", (req, res) => {
             usernames,
             userpassword,
           ])
+
           .then(() => res.send("user created"))
           .catch((error) => console.log("Something is wrong " + error));
       } else {
