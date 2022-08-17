@@ -31,12 +31,7 @@ function App() {
       <SearchSection />
       <CategorieSlider />
       <Footer />
-      {/* <section className="body-product">
-          <img src={logo} className="App-logo" alt="logo" />
-
-          </section>
-          
-        */}
+     
       {/* <ProductSlider /> */}
     </div>
   );
