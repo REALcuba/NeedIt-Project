@@ -4,9 +4,7 @@ import "./header.css";
 import main_logo from "../../img/main_logo.png";
 
 import SignUpBtn from "../SignUpBtn/SignUpBtn";
-// import Login from "../Login/Login";
 import LoginBtn from "../LoginBtn/LoginBtn";
-// import MenuBtn from "../MenuBtn/MenuBtn";
 import {Link} from "react-router-dom"
 
 function Header() {
@@ -21,7 +19,7 @@ function Header() {
 
         <div className="navBar">
           
-            <Link to="/Auth">
+            <Link to="/Login">
                <LoginBtn/> 
                </Link>
          
