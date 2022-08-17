@@ -23,6 +23,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
+          <Route path='/' exact element={<App/>}/>
           <Route path="/auth" element={<Auth />} />
         </Routes>
       </BrowserRouter>
