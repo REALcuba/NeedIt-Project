@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
  function SignUp(props) {
-  let [authMode, setAuthMode] = useState("signup");
-
-  const changeAuthMode = () => {
+     let [authMode, setAuthMode] = useState("signup");
+     
+     const changeAuthMode = () => {
     setAuthMode(authMode === "signup" ? "signin" : "signup");
   };
 
@@ -15,7 +15,6 @@ import React, { useState } from "react";
             <h3 className="Auth-form-title"> Sign Up</h3>
             <div className="text-center">
             Already registered?{" "}
-
               <span className="link-primary" onClick={changeAuthMode}>
                 Login
               </span>

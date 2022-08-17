@@ -4,12 +4,12 @@ import "./App.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+//boostrap
 import "bootstrap/dist/css/bootstrap.min.css";
 
-//boostrap login
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Auth from "./components/Auth/Auth";
 import SignUp from "./components/SignUp/SignUp";
+import Login from "./components/Login/Login";
 // components
 import Header from "./components/Header/Header.jsx";
 // import ProductSlider from "./components/ProductSlider/ProductSlider";
@@ -24,19 +24,14 @@ function App() {
         <Header />
         <Routes>
           <Route path='/app' exact element={<App/>}/>
-          <Route path="/auth" element={<Auth />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp/>}/>
         </Routes>
       </BrowserRouter>
       <SearchSection />
       <CategorieSlider />
       <Footer />
-      {/* <section className="body-product">
-          <img src={logo} className="App-logo" alt="logo" />
-
-          </section>
-          
-        */}
+     
       {/* <ProductSlider /> */}
     </div>
   );
