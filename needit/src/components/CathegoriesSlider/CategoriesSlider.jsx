@@ -39,7 +39,6 @@ export default function CategorieSlider () {
       // autoplay: true,
       autoplaySpeed: 2000,
       pauseOnHover: true,
-      // c
       centerPadding: "60px",
       // nextArrow: <NextArrow />,
       // prevArrow: <PrevArrow />,
@@ -51,11 +50,11 @@ export default function CategorieSlider () {
         <Slider {...settings}>
              {dataSlider.map((item) => (
         
-          <div className="categorySlider">
-            <div className="card">
+          <div className="categorySlider" key={Slider}>
+            <div className="card" >
             <h2>{item.name}</h2>
-            <img  className="cardImg" src={item.img} alt={item.name} />
             </div>
+            <img  className="cardImg" src={item.img} alt={item.name} />
           </div>
          ))} 
           
