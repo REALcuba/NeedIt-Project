@@ -3,12 +3,15 @@ import React, { useState } from 'react';
 import  "./slider.css";
 
 //components
-import dataSlider from "../Slider/dataSlider";
+import dataSlider from "./dataSlider";
 import BtnSlider from "./BtnSlider";
+
+//import product slider img
+import furniture from "../img/furniture.jpeg"
 
 export default function Slider() {
 
-  const[slideIndex, setSlideIndex] = useState(1)
+  const[slideIndex, setSlideIndex] = useState([1,2,3,])
 
   const nextSlide = () => {
     if(slideIndex !== dataSlider.length){
@@ -29,12 +32,13 @@ if (slideIndex !== 1) {
         <div className="container-slider">
             {dataSlider.map((obj, index) => {
                 return(
-                    <div  
+                    <div 
+                    
                     key={obj.id}
-                    className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
+                    className={slideIndex === obj.id ? "slide active-anim" : "slide"}
                          >
                         <img 
-                        src={process.env.PUBLIC_URL + `/Imgs/img${index + 1}.jpg`}
+                        src={furniture}
                         alt=""
                         />
                     </div>)

@@ -1,28 +1,38 @@
-import logo from "./img/globe-recycling-icon-recycling-earth.png";
+// import logo from "./img/NeedIt.gif";
 import "./App.css";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+//boostrap
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SignUp from "./components/SignUp/SignUp";
+import Login from "./components/Login/Login";
 // components
-import Header from "./components/header/Header.jsx";
-import Carousel from "./components/Carousel/Carousel";
+import Header from "./components/Header/Header.jsx";
+import Home from "./Home/Home";
+// import ProductSlider from "./components/ProductSlider/ProductSlider";
+// import CategorieSlider from "./components/CathegoriesSlider/CategoriesSlider";
+// import SearchSection from "./components/SearchSection/SearchSection";
+// import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' exact element={<Home/>}/>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp/>}/>
 
-        <a
-          className="App-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Need It ?
-        </a>
-        <Carousel />
-      </header>
-      {/* <footer/> */}
+        </Routes>
+      </BrowserRouter>
+      
+     
+      {/* <ProductSlider /> */}
     </div>
   );
 }

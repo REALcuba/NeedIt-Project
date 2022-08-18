@@ -1,6 +1,7 @@
 .carousel_wrapper{
-    width: 100%;
+    width:  60%;
     /* height: 10em; */
     background-color: aliceblue;
     color: black;
+    margin: 8px;
 }
