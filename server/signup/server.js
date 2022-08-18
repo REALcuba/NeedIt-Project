@@ -1,9 +1,9 @@
 const express = require("express");
-const { Pool, Client } = require("pg");
+const { Pool } = require("pg");
 const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
 
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 const app = express();
 app.use(bodyParser.json());
 
@@ -16,12 +16,11 @@ const pool = new Pool({
   port: 5432,
 });
 
-app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 
 //endpoint to home page
 app.get("/", (req, res) => {
-  res.render("index");
+  res.send("hello");
 });
 
 //endpoint to users json
@@ -35,22 +34,12 @@ app.get("/users", (req, res) => {
 });
 
 //rendering register
-app.get("/users/register", (req, res) => {
-  res.render("register");
-});
-
-//rendering login
-app.get("/users/login", (req, res) => {
-  res.render("login");
-});
-
-//rendering dasboard
-app.get("/users/dashboard", (req, res) => {
-  res.render("dashboard", { user: "Fatma" });
+app.get("/users", (req, res) => {
+  res.send("register");
 });
 
 // POST endpoint for signup
-app.post("/users/register", async (req, res) => {
+app.post("/users", async (req, res) => {
   const userName = req.body.name;
   const userEmail = req.body.email;
   const userCity = req.body.city;
