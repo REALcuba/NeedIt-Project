@@ -1,6 +1,6 @@
 import logo from "./img/globe-recycling-icon-recycling-earth.png";
 import "./App.css";
-import Header from "./components/Header/Header";
+import Header from "./components/header/Header";
 
 function App() {
   return (
