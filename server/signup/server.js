@@ -2,10 +2,12 @@ const express = require("express");
 const { Pool } = require("pg");
 const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const PORT = 5000;
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 //conected to postgres
 const pool = new Pool({
@@ -33,11 +35,6 @@ app.get("/users", (req, res) => {
   });
 });
 
-//rendering register
-app.get("/users", (req, res) => {
-  res.send("register");
-});
-
 // POST endpoint for signup
 app.post("/users", async (req, res) => {
   const userName = req.body.name;
@@ -46,9 +43,6 @@ app.post("/users", async (req, res) => {
   const userCountry = req.body.country;
   const usernames = req.body.username;
   const userpassword = req.body.password;
-
-  const hashedPassword = await bcrypt.hash(userpassword, 10);
-  console.log(hashedPassword);
 
   const checkName = "SELECT * FROM signup WHERE name = $1";
   const insertNewUsers =
