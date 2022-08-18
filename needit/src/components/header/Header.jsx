@@ -19,13 +19,13 @@ function Header() {
 
         <div className="navBar">
           
-            <Link to="/Login">
+            <Link to="/login">
                <LoginBtn/> 
                </Link>
          
 
           
-            <Link to="/SignUp">
+            <Link to="/signup">
             <SignUpBtn />
             </Link>
           
