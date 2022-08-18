@@ -12,10 +12,11 @@ import SignUp from "./components/SignUp/SignUp";
 import Login from "./components/Login/Login";
 // components
 import Header from "./components/Header/Header.jsx";
+import Home from "./Home/Home";
 // import ProductSlider from "./components/ProductSlider/ProductSlider";
-import CategorieSlider from "./components/CathegoriesSlider/CategoriesSlider";
-import SearchSection from "./components/SearchSection/SearchSection";
-import Footer from "./components/Footer/Footer";
+// import CategorieSlider from "./components/CathegoriesSlider/CategoriesSlider";
+// import SearchSection from "./components/SearchSection/SearchSection";
+// import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -23,14 +24,13 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path='/app' exact element={<App/>}/>
+          <Route path='/' exact element={<Home/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp/>}/>
+
         </Routes>
       </BrowserRouter>
-      <SearchSection />
-      <CategorieSlider />
-      <Footer />
+      
      
       {/* <ProductSlider /> */}
     </div>
