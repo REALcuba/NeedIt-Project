@@ -10,13 +10,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp/SignUp";
 import Login from "./components/Login/Login";
+import Profile from "./components/Profile/Profile";
 // components
 import Header from "./components/Header/Header.jsx";
 import Home from "./Home/Home";
-// import ProductSlider from "./components/ProductSlider/ProductSlider";
-// import CategorieSlider from "./components/CathegoriesSlider/CategoriesSlider";
-// import SearchSection from "./components/SearchSection/SearchSection";
-// import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -27,10 +25,11 @@ function App() {
           <Route path='/' exact element={<Home/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp/>}/>
-
+          <Route path="/profile" element={<Profile/>}/>
+        
         </Routes>
       </BrowserRouter>
-      
+      <Footer/>
      
       {/* <ProductSlider /> */}
     </div>
