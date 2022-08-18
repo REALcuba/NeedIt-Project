@@ -1,0 +1,44 @@
+.categories{
+    /* width: 100%; */
+    background-color: white;
+
+    height: 352px;
+    display: block;
+    padding: 0 50px;
+}
+
+.card{
+    padding: 10px;  
+    width: 200px;
+ }
+ 
+.cardImg{
+    height: 200px;
+    width: 15em
+    
+}
+.categorySlider{
+    width: 79%;
+}
+
+.slick-track{
+    width: 90%; 
+    height: 300px;
+}
+
+.slick-slider {
+   margin: -41px 38px;
+    width: 95%;
+}
+/* .slick-list {
+    
+    margin: 0 -10px;
+
+  } */
+ .slick-arrow{
+    background-color:rgb(70 237 155 / 73%);
+    
+ }
+.slick-arrow button :hover {
+    background-color: rgb(32, 32, 187);
+ }
