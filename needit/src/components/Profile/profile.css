@@ -1,0 +1,18 @@
+/* .profileImgDiv{
+display: inline-flex;
+} */
+.profileImg{
+    max-width: 130px;
+    
+}
+.profileDetails{
+    display: flex;
+    align-items: center;
+
+}
+.profileContentDiv{
+    background-color: ghostwhite;
+}
+.userDataWraper{
+    padding-left: 50px;
+}

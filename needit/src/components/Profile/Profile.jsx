@@ -1,27 +1,30 @@
-import React from 'react'
-
+import React from "react";
 
 //style
-import './profile'
-import blank from '../../img/blank.jpg'
+import "./profile.css";
+import blank from "../../img/blank.jpg";
 function Profile() {
   return (
-    <div className='userProfile'>
-        <div className='profileContentDiv'>
-            <div>
-                <div className='profileImgDiv'>
-                    <img src={blank} alt="" />
-                </div>
-                <div>
-
-                Profile
-                </div>
+    <div className="userProfileBody container">
+      <div className="profileContentDiv">
+        <div className="profileDetails">
+          <div className="imgDiv">
+            <img src={blank} className="profileImg" alt="" />
+          </div>
+          <div className="userDataWraper">
+            <div >
+             <div className="userData">
+              <h3>Name</h3>
+              <h3>lorem</h3>
+              <div>bio</div>
+             </div>
             </div>
-            <div>bio</div>
-            <div>user products</div>
+          </div>
         </div>
+        <div>user products</div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Profile
+export default Profile;
