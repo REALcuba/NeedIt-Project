@@ -2,8 +2,9 @@ import React from "react";
 
 import "./header.css";
 import main_logo from "../../img/main_logo.png";
-
+//import SignUp from "../SignUp/register";
 import SignUpBtn from "../SignUpBtn/SignUpBtn";
+
 import LoginBtn from "../LoginBtn/LoginBtn";
 import { Link } from "react-router-dom";
 
@@ -22,7 +23,7 @@ function Header() {
             <LoginBtn />
           </Link>
 
-          <Link to="/signup">
+          <Link to="/register">
             <SignUpBtn />
           </Link>
         </div>

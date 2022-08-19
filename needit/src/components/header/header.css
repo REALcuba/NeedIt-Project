@@ -26,10 +26,10 @@
   font-weight: bold;
   cursor: pointer;
   font-weight: bold;
-  transition: all 1s;
+  transition: all 1s inherit;
 }
 .Btn:hover {
-  transform: scale(1.2);
+  transform: scale(0.1);
   color: #1d6868;
   background-color: #9ba9a5;
 }
