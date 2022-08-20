@@ -1,16 +1,13 @@
 .App {
   text-align: center;
-  
 }
 
 .App-logo {
   height: 35vmin;
   pointer-events: none;
-
 }
 
-
-.body-product  {
+.body-product {
   background-color: #56c9b6;
   width: 100%;
   min-height: 100vh;
@@ -23,11 +20,6 @@
 
 .App-link {
   color: #61dafb;
-}
-
-
-.App {
-  background-color: rgb(119, 125, 119);
 }
 
 .Auth-form-container {

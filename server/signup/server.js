@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 });
 
 //endpoint to users json
-app.get("/users", (req, res) => {
+app.get("/home", (req, res) => {
   pool.query("SELECT * FROM signup", (error, response) => {
     if (error) {
       throw error;
@@ -44,6 +44,7 @@ app.post("/users", async (req, res) => {
   const usernames = req.body.username;
   const userpassword = req.body.password;
 
+  console.log(req.body);
   const checkName = "SELECT * FROM signup WHERE name = $1";
   const insertNewUsers =
     "INSERT INTO signup (name,email,city,country,username,password)  VALUES ($1,$2,$3,$4,$5,$6)";
