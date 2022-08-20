@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./loginForm.css";
+import { Link } from "react-router-dom";
+
 
 function Login() {
   const [emailReg, setEmailReg] = useState("");
@@ -50,7 +52,7 @@ function Login() {
 
         <button type="submit">Login</button>
 
-        <a href="/Register">Not member yet? signup here</a>
+        <Link to="/Register">Not member yet? signup here</Link>
       </form>
     </div>
   );
