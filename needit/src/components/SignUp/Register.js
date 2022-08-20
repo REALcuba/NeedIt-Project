@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./style.css";
 
 function Signup() {
@@ -92,7 +94,7 @@ function Signup() {
 
         <button type="submit">Sign Up</button>
 
-        <a href="/login">Already registered? Login here</a>
+        <Link to="/login"> Already registered? Login here</Link>
       </form>
     </div>
   );

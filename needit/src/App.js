@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp/Register";
+import Register from "./components/SignUp/Register";
 import Login from "./components/Login/Login";
 // components
 import Header from "./components/Header/Header.jsx";
@@ -16,7 +17,7 @@ import Home from "./Home/Home";
 // import ProductSlider from "./components/ProductSlider/ProductSlider";
 // import CategorieSlider from "./components/CathegoriesSlider/CategoriesSlider";
 // import SearchSection from "./components/SearchSection/SearchSection";
-// import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -27,9 +28,10 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/Register" element={<SignUp />} />
+          <Route path="/login" element={<Register />} />
         </Routes>
       </BrowserRouter>
-
+<Footer/>
       {/* <ProductSlider /> */}
     </div>
   );
