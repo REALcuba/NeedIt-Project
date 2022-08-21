@@ -6,9 +6,6 @@ import  "./slider.css";
 import dataSlider from "./dataSlider";
 import BtnSlider from "./BtnSlider";
 
-//import product slider img
-import furniture from "../img/furniture.jpeg"
-
 export default function Slider() {
 
   const[slideIndex, setSlideIndex] = useState([1,2,3,])
@@ -30,23 +27,19 @@ if (slideIndex !== 1) {
   }
     return (
         <div className="container-slider">
-            {dataSlider.map((obj, index) => {
-                return(
-                    <div 
-                    
-                    key={obj.id}
-                    className={slideIndex === obj.id ? "slide active-anim" : "slide"}
-                         >
-                        <img 
-                        src={furniture}
-                        alt=""
-                        />
-                    </div>)
-})}
-             <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
-             <BtnSlider moveSlide={nextSlide} direction={"next"}/>
+            {dataSlider.map((item) => (
+        
+        <div className="categorySlider" key={Slider}>
+          <div className="cardText" >
+          <h2>{item.name}</h2>
+          <img  className="cardImg" src={item.img} alt={item.name} />
+          </div>
+        </div>
+       )
+            //  <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
+            //  <BtnSlider moveSlide={nextSlide} direction={"next"}/>
   
-     
+       ) }
         </div>
     )
 }

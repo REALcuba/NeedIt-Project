@@ -1,11 +1,11 @@
 import React from "react";
-import Slider from "react-slick";
+// import Slider from "react-slick";
 
-import dataSlider from "../ProductSlider/Slider/dataSlider";
+// import dataSlider from "../ProductSlider/Slider/dataSlider";
 
 
 import "./categoriesSlider.css"; 
-
+import Slider from "../ProductSlider/Slider/Slider";
 
 //using react-slick to create the Slider
 
@@ -47,18 +47,8 @@ export default function CategorieSlider () {
     return (
       <div className="categories">
         <h2>Categories</h2>
-        <Slider {...settings}>
-             {dataSlider.map((item) => (
         
-          <div className="categorySlider" key={Slider}>
-            <div className="card" >
-            <h2>{item.name}</h2>
-            </div>
-            <img  className="cardImg" src={item.img} alt={item.name} />
-          </div>
-         ))} 
-          
-        </Slider>
+        <Slider/>
       </div>
     );
   }
