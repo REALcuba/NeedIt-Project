@@ -7,7 +7,7 @@ import ProductPage from "../ProductPage/ProductPage";
 function ProductPageBtn() {
   return (
     <div>
-      <input type="button" className="ProductPageBtn Btn" value="Product" onClick={ProductPage} />
+      <input type="button" className="ProductPageBtn Btn" value="Products" onClick={ProductPage} />
     </div>
   );
 }
