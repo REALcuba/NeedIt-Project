@@ -7,6 +7,7 @@ function ProductPage() {
       <div ><Searchbar/></div>
       {/* /start your code below */}
       <h2>ProductPage</h2>
+      
     </div>
   )
 }
