@@ -12,9 +12,6 @@ import LoginBtn from "../LoginBtn/LoginBtn";
 import ProductPageBtn from "../ProductPageBtn/ProductPageBtn";
 
 
-import LoginBtn from "../LoginBtn/LoginBtn";
-
-
 function Header() {
   return (
     <div>
