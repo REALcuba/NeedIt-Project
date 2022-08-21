@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./header.css";
 import main_logo from "../../img/main_logo.png";
 //import SignUp from "../SignUp/register";
 import SignUpBtn from "../SignUpBtn/SignUpBtn";
-
+import MenuBtn from "../MenuBtn/MenuBtn";
 import LoginBtn from "../LoginBtn/LoginBtn";
-import { Link } from "react-router-dom";
+import ProductPageBtn from "../ProductPageBtn/ProductPageBtn";
 
 function Header() {
   return (
@@ -25,6 +26,12 @@ function Header() {
 
           <Link to="/register">
             <SignUpBtn />
+          </Link>
+         
+            <MenuBtn/>
+          
+          <Link to="/product">
+            <ProductPageBtn/>
           </Link>
         </div>
       </div>

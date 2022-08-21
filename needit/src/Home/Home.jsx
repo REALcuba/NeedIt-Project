@@ -7,6 +7,7 @@ import React from "react";
 import CategorieSlider from "../components/CathegoriesSlider/CategoriesSlider";
 import SearchSection from "../components/SearchSection/SearchSection";
 
+import MenuBtn from "../components/MenuBtn/MenuBtn";
 function Home() {
   return (
     <div className="home">
