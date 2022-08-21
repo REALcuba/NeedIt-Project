@@ -31,19 +31,7 @@ export default function CategorieSlider () {
   //     />
   //   );
   // }
-    const settings = { 
-      dots: true,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      // autoplay: true,
-      autoplaySpeed: 2000,
-      pauseOnHover: true,
-      centerPadding: "60px",
-      // nextArrow: <NextArrow />,
-      // prevArrow: <PrevArrow />,
-        
-    };
+  
     return (
       <div className="categories">
         <h2>Categories</h2>
