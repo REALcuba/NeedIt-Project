@@ -19,7 +19,7 @@ export const dataSlider = [
   },
   {
     id: 2,
-    name:"furniture",
+    name:"furn",
     width: 230,
     height: 230,
     img: 

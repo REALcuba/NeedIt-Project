@@ -28,6 +28,7 @@ function Header() {
             <Link to="/SignUp">
             <SignUpBtn />
             </Link>
+            
           
         </div>
       </div>

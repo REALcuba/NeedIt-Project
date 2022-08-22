@@ -5,11 +5,16 @@ import migracodeLogo from "../../img/migracodeLogo.png"
 
 //component
 import About from '../About/About'
+import AboutBtn from '../AboutBtn/AboutBtn'
 
 function Footer() {
   return (
     <div className='footerDiv'>
-        <About/>
+       
+        <Link to="/about">
+            <AboutBtn  />
+            </Link>
+            
         <div className='migracodeDiv'>
             <a href="https://migracode.openculturalcenter.org/" className='migracodeLogo' >
                 <img src= {migracodeLogo} alt="" />Migracode</a>
