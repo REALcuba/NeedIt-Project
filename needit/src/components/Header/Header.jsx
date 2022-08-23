@@ -9,7 +9,6 @@ import SignUpBtn from "../SignUpBtn/SignUpBtn";
 // import MenuBtn from "../MenuBtn/MenuBtn";
 import LoginBtn from "../LoginBtn/LoginBtn";
 import ProductPageBtn from "../ProductPageBtn/ProductPageBtn";
-import AboutBtn from "../About/AboutBtn";
 
 function Header() {
   return (
@@ -36,9 +35,7 @@ function Header() {
           <Link to="/product">
             <ProductPageBtn/>
           </Link>
-          <Link to="/about">
-            <AboutBtn/>
-          </Link>
+        
 
         </div>
       </div>

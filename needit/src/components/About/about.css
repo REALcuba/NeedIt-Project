@@ -27,3 +27,9 @@
     width:  10em;
     border-radius: 30px;
 }
+.aboutEl{
+    color: #2106069e;
+    display: flex;
+    font-weight: 300;
+    margin-left: 20px;
+}
