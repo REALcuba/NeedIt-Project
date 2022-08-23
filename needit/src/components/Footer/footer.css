@@ -1,5 +1,8 @@
 .footerDiv{
     /* height: 60px; */
+    /* position: fixed; */
+    margin-top: 70px;
+   bottom: 0;
     padding-bottom: 10px;
     background-color: #ccc;
     background-image: linear-gradient(to top left,#b9ff00, #cccc4b, green)
@@ -16,12 +19,5 @@ width: 60px;
     color: rgb(46, 45, 45);
     padding-top: 5px;
 
-}
-
-.aboutDiv{
-    display: flex;
-    padding: 5px px;
-    width: 4em;
-    
 }
 
