@@ -17,12 +17,8 @@
 
 .body-product  {
   background-color: #56c9b6;
-<<<<<<< HEAD
-  min-height: 600px;
-=======
   width: 100%;
   min-height: 100vh;
->>>>>>> origin/angel
   display: flex;
   align-items: center;
   justify-content: center;
