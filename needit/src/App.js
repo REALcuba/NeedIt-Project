@@ -1,9 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 //boostrap
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -15,6 +12,7 @@ import Header from "./components/Header/Header.jsx";
 import ProductPage from "./components/ProductPage/ProductPage";
 import Home from "./Home/Home";
 import Footer from "./components/Footer/Footer";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -27,9 +25,10 @@ function App() {
           <Route path="/register" element={<SignUp />} />
           <Route path="/login" element={<Register />} />
           <Route path="/product" element={<ProductPage />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
-<Footer/>
+      <Footer />
       {/* <ProductSlider /> */}
     </div>
   );

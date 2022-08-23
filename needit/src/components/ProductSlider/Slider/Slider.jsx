@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import  "./slider.css";
 
 //components
 import dataSlider from "./dataSlider";
-import BtnSlider from "./BtnSlider";
+// import BtnSlider from "./BtnSlider";
 
 export default function Slider() {
 

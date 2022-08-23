@@ -1,0 +1,29 @@
+.teamMemberCard{
+    display: flex;
+    background-color: blanchedalmond;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.aboutDiv{
+    display: flex;
+    padding: 5px px;
+    flex-direction: column;
+    background-color: #dcf695;
+    align-items: center;
+}
+.memberCard{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+.memberData{
+    display: flex;
+    margin-left: 21px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.memberCard img {
+    width:  10em;
+    border-radius: 30px;
+}
