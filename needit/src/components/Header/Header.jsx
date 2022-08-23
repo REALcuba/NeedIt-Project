@@ -36,9 +36,6 @@ function Header() {
           <Link to="/product">
             <ProductPageBtn />
           </Link>
-          <Link to="/about">
-            <AboutBtn />
-          </Link>
         </div>
       </div>
     </div>
