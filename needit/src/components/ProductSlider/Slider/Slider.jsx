@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import  "./slider.css";
 
@@ -8,7 +8,7 @@ import dataSlider from "./dataSlider";
 
 export default function Slider() {
 
-  const[slideIndex, setSlideIndex] = useState([])
+//   const[slideIndex, setSlideIndex] = useState([])
 
 //   const nextSlide = () => {
 //     if(slideIndex !== dataSlider.length){
@@ -35,11 +35,11 @@ export default function Slider() {
           <img  className="cardImg" src={item.img} alt={item.name} />
           </div>
         </div>
-       )
-            //  <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
-            //  <BtnSlider moveSlide={nextSlide} direction={"next"}/>
-  
-       ) }
+       ))}
+      {/* <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
+      <BtnSlider moveSlide={nextSlide} direction={"next"}/>
+   */}
+        
         </div>
     )
 }
