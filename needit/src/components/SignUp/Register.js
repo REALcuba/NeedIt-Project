@@ -33,7 +33,7 @@ function Signup() {
 
   return (
     <div className="Signup">
-      <form className="registration" onSubmit={Register}>
+      <form className="registration" onSubmit={Register} method="POST">
         <h1>Sign Up</h1>
         <h3>Enter your personal details</h3>
         <input

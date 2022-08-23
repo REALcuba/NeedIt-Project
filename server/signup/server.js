@@ -37,14 +37,15 @@ app.get("/home", (req, res) => {
 
 // POST endpoint for signup
 app.post("/users", async (req, res) => {
+  // hashedpassword
+  const hashedPassword = await bcrypt.hash(req.body.password, 10);
   const userName = req.body.name;
   const userEmail = req.body.email;
   const userCity = req.body.city;
   const userCountry = req.body.country;
   const usernames = req.body.username;
-  const userpassword = req.body.password;
+  const userpassword = hashedPassword;
 
-  console.log(req.body);
   const checkName = "SELECT * FROM signup WHERE name = $1";
   const insertNewUsers =
     "INSERT INTO signup (name,email,city,country,username,password)  VALUES ($1,$2,$3,$4,$5,$6)";
