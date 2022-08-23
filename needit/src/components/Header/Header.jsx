@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 import "./header.css";
 import main_logo from "../../img/main_logo.png";
-//import SignUp from "../SignUp/register";
 import SignUpBtn from "../SignUpBtn/SignUpBtn";
 
 // import MenuBtn from "../MenuBtn/MenuBtn";

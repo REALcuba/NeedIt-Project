@@ -8,18 +8,18 @@ import "./about.css";
 function About() {
   
       return (
-        <div className='aboutDiv'>
+        <div className='aboutDiv' >
 
       {info.map((teamMember) => (
-        <div class="container" key={teamMember.id}>
-          <div className='memberCard'>
+        <div className="container" key={teamMember.name}>
+          <div className='memberCard' >
             
 
           <img src={teamMember.img }alt={teamMember.name} />
-          <div className='memberData'>
+          <div className='memberData' >
           <h3>Name: {teamMember.name}</h3>
-          <p>Role: {teamMember.role}</p>
-          <a href={teamMember.contact}>LinkedIn: {teamMember.contact}</a>
+          <span>Role: {teamMember.role}</span>
+          <a target="_blank" rel="noreferrer"href={teamMember.contact}>LinkedIn: {teamMember.contact}</a>
             </div>
           </div>
         </div>

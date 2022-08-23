@@ -21,7 +21,13 @@
         "contact":"https://www.linkedin.com/in/matthew-kwofie-jnr-155bb623b/",
         "role" : "Developer"
     },
-   
+    {
+        "name":"Fatma Shauqi",
+        "img":"https://media-exp1.licdn.com/dms/image/D4E35AQE1BA-Ezi_8VA/profile-framedphoto-shrink_400_400/0/1656261643169?e=1661432400&v=beta&t=NYn177yIsOVDyWVFmkj1pG2cQsSHgZAkmpnZYY14QsY",
+        "project":"need-it",
+        "contact":"https://www.linkedin.com/in/fatma-shauqi-746301222/",
+        "role" : "Developer"
+        },
     {
         "name":"Assad Ben Ahmed",
         "img":"https://media-exp1.licdn.com/dms/image/D4E35AQEwQ7W3NRE3_w/profile-framedphoto-shrink_400_400/0/1641994096492?e=1661432400&v=beta&t=aZYhJqXMNbj5q5Jcnu9VaHSrieHHUC1fZRFgmYLRTyM",
@@ -36,14 +42,8 @@
         "project":"need-it",
         "contact":"https://www.linkedin.com/in/daniel-vidigal-boiwko-b68724193/",
         "role" : "Developer"
-        },
+        }
     
-        {
-            "name":"Fatma Shauqi",
-            "img":"https://media-exp1.licdn.com/dms/image/D4E35AQE1BA-Ezi_8VA/profile-framedphoto-shrink_400_400/0/1656261643169?e=1661432400&v=beta&t=NYn177yIsOVDyWVFmkj1pG2cQsSHgZAkmpnZYY14QsY",
-            "project":"need-it",
-            "contact":"https://www.linkedin.com/in/fatma-shauqi-746301222/",
-            "role" : "Developer"
-            }
+        
     
         ]
