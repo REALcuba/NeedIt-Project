@@ -1,18 +1,7 @@
 // import logo from "./img/NeedIt.gif";
 import "./App.css";
 
-<<<<<<< HEAD
 
-// components
-import Header from "./components/header/Header.jsx";
-import MainBanner from "./components/MainBanner/MainBanner";
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <MainBanner />
-      {/* <footer/> */}
-=======
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -45,7 +34,7 @@ function App() {
       <Footer />
      
       {/* <ProductSlider /> */}
->>>>>>> origin/angel
+
     </div>
   );
 }
