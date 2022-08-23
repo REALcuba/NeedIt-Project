@@ -29,14 +29,11 @@ function Header() {
             <SignUpBtn />
           </Link>
 
-         
-            {/* <MenuBtn/> */}
-          
-          <Link to="/product">
-            <ProductPageBtn/>
-          </Link>
-        
+          {/* <MenuBtn/> */}
 
+          <Link to="/product">
+            <ProductPageBtn />
+          </Link>
         </div>
       </div>
     </div>
