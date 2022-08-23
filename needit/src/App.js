@@ -27,8 +27,8 @@ function App() {
           <Route path="/product" element={<ProductPage />} />
           <Route path="/about" element={<About />} />
         </Routes>
-      </BrowserRouter>
       <Footer />
+      </BrowserRouter>
       {/* <ProductSlider /> */}
 
     </div>

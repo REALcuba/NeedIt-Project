@@ -10,11 +10,10 @@ import AboutBtn from "../About/AboutBtn";
 function Footer() {
   return (
     <div className="footerDiv">
-      
-        {/* <Link to="/about">
-          <AboutBtn />
-        </Link> */}
-     
+      <Link to="/about">
+        <AboutBtn />
+      </Link>
+
       <div className="migracodeDiv">
         <a
           target="_blank "
