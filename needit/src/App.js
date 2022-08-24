@@ -5,12 +5,13 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // components
+import Home from "./Home/Home";
 import SignUp from "./components/SignUp/Register";
 import Register from "./components/SignUp/Register";
 import Login from "./components/Login/Login";
 import Header from "./components/Header/Header.jsx";
+import Profile from "./components/Profile/Profile";
 import ProductPage from "./components/ProductPage/ProductPage";
-import Home from "./Home/Home";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/register" element={<SignUp />} />
           <Route path="/login" element={<Register />} />
           <Route path="/product" element={<ProductPage />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/about" element={<About />} />
         </Routes>
       <Footer />
