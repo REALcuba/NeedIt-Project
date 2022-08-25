@@ -1,7 +1,8 @@
 .footerDiv{
     /* height: 60px; */
     /* position: fixed; */
-    
+    position: fixed;
+    width: 100%;
     margin-top: 70px;
    bottom: 0;
     padding-bottom: 10px;
