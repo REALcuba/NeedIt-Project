@@ -38,6 +38,7 @@ function Signup() {
         <h3>Enter your personal details</h3>
         <input
           type="text"
+          name="name"
           placeholder=" Full name"
           required
           onChange={(e) => {
@@ -47,6 +48,7 @@ function Signup() {
 
         <input
           type="email"
+          name="email"
           placeholder="Email"
           required
           onChange={(e) => {
@@ -56,7 +58,8 @@ function Signup() {
 
         <input
           type="text"
-          placeholder="  City"
+          name="city"
+          placeholder="City"
           required
           onChange={(e) => {
             setcityReg(e.target.value);
@@ -65,6 +68,7 @@ function Signup() {
 
         <input
           type="text"
+          name="country"
           placeholder=" Country"
           required
           onChange={(e) => {
@@ -74,6 +78,7 @@ function Signup() {
 
         <input
           type="text"
+          name="username"
           placeholder="username"
           required
           onChange={(e) => {
@@ -83,6 +88,7 @@ function Signup() {
 
         <input
           type="password"
+          name="password"
           placeholder="password"
           required
           onChange={(e) => {

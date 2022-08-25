@@ -3,11 +3,26 @@ const { Pool } = require("pg");
 const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const session = require("express-session");
+const flash = require("express-flash");
+const passport = require("passport");
 
 const PORT = 5000;
 const app = express();
+
 app.use(bodyParser.json());
 app.use(cors());
+app.use(
+  session({
+    secret: "secret",
+
+    resave: false,
+
+    saveUninitialized: false,
+  })
+);
+
+app.use(flash());
 
 //conected to postgres
 const pool = new Pool({
@@ -46,6 +61,7 @@ app.post("/users", async (req, res) => {
   const usernames = req.body.username;
   const userpassword = hashedPassword;
 
+  //check the name if repated
   const checkName = "SELECT * FROM signup WHERE name = $1";
   const insertNewUsers =
     "INSERT INTO signup (name,email,city,country,username,password)  VALUES ($1,$2,$3,$4,$5,$6)";
