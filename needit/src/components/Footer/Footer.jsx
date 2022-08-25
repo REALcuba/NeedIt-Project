@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 
 import "./footer.css";
 import migracodeLogo from "../../img/migracodeLogo.png";
-
+// import Chat from "../Chat/Chat";
 //component
 import AboutBtn from "../About/AboutBtn";
 
-function Footer() {
+
+function Footer()  {
   return (
     <div className="footerDiv">
       <Link to="/about">
@@ -23,6 +24,11 @@ function Footer() {
           <img src={migracodeLogo} alt="" />
           Migracode
         </a>
+         {/* <Link to="/chat"> */}
+          {/* <Chat/> */}
+         
+      {/* </Link> */}
+
       </div>
     </div>
   );

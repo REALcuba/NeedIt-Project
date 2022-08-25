@@ -13,6 +13,8 @@ import ProductPage from "./components/ProductPage/ProductPage";
 import Home from "./Home/Home";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
+import Chat from "./components/Chat/Chat";
+
 
 function App() {
   return (
@@ -26,11 +28,13 @@ function App() {
           <Route path="/login" element={<Register />} />
           <Route path="/product" element={<ProductPage />} />
           <Route path="/about" element={<About />} />
+          {/* <Route path="/chat" element={<Chat />} /> */}
+          
         </Routes>
       <Footer />
       </BrowserRouter>
       {/* <ProductSlider /> */}
-
+ <Chat /> 
     </div>
   );
 }
