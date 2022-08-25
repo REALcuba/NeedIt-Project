@@ -13,28 +13,35 @@ import ProductPageBtn from "../ProductPageBtn/ProductPageBtn";
 function Header() {
   return (
     <div>
-      <div className="navBar_wrapper">
-        <div className="logo">
+      <div className="navbar container-fluid">
+        <div className=" navbar-brand">
           <Link to="/">
-            <img src={main_logo} className="main_logo" alt="logo" />
+            <img src={main_logo} className="main_logo navbar-brand" alt="logo" />
           </Link>
-        </div>
-
-        <div className="navBar">
-          <Link to="/login">
+        </div >
+        
+        <ul className="navbar-nav navBar_wrapper">
+          <li className="nav-item"><Link to="/login" className="nav-link">
             <LoginBtn />
-          </Link>
+          </Link></li>
 
-          <Link to="/register">
+          <li className="nav-item"><Link to="/register">
             <SignUpBtn />
-          </Link>
+          </Link></li>
 
           {/* <MenuBtn/> */}
 
-          <Link to="/product">
+          {/* <li className="nav-item"><Link to="/product">
             <ProductPageBtn />
-          </Link>
-        </div>
+          </Link></li> */}
+          <li class="nav-item dropstart"/>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Menu</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Link 1</a></li>
+      <li><a class="dropdown-item" href="#">Link 2</a></li>
+      <li><a class="dropdown-item" href="#">Link 3</a></li>
+        </ul>
+       </ul>
       </div>
     </div>
   );

@@ -1,10 +1,13 @@
 .navBar_wrapper {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
-  text-align: center;
-  background-color: #f5f5f5;
-  /* padding: 20px; */
+  /* text-align: center; */
+  /* background-color: #f5f5f5; */
+  padding: 20px;
+ 
+  flex-direction: row;
+ 
 }
 .main_logo {
   width: 100px;
