@@ -4,7 +4,6 @@ import "./App.css";
 //boostrap
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 // components
 import Home from "./Home/Home";
 import SignUp from "./components/SignUp/Register";
@@ -35,9 +34,9 @@ function App() {
           
         </Routes>
       <Footer />
+      <Chat /> 
       </BrowserRouter>
       {/* <ProductSlider /> */}
- <Chat /> 
     </div>
   );
 }
