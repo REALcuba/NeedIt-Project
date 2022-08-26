@@ -17,10 +17,10 @@ function Footer()  {
 
       <div className="migracodeDiv">
         <a
-          target="_blank " rel="noreferrer"
+          target="_blank "
           href="https://migracode.openculturalcenter.org/"
           className="migracodeLogo"
-          >
+        >
           <img src={migracodeLogo} alt="" />
           {/* Migracode */}
         </a>
