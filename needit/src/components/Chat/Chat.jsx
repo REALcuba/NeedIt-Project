@@ -44,7 +44,7 @@ const theme = {
 
 // Set some properties of the bot
 const config = {
-  botAvatar: "img.png",
+  botAvatar: "https://banner2.cleanpng.com/20190628/wtz/kisspng-chatbot-oneplus-5t-emoji-android-human-skin-color-5d1645f19dd8c4.5226370815617407856465.jpg",
   floating: true,
 };
 function Chat() {
