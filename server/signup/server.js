@@ -24,6 +24,9 @@ app.use(
 
 app.use(flash());
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 //conected to postgres
 const pool = new Pool({
   user: "postgres",
@@ -87,6 +90,41 @@ app.post("/users", async (req, res) => {
       }
     })
     .catch((error) => console.log("error validator user exsit" + error));
+});
+
+//Login endpoint
+app.post("/users/login", (req, res) => {
+  const email = req.body.email;
+  const password = req.body.password;
+
+  pool.query(
+    "SELECT * FROM signup WHERE email = $1",
+    [email],
+    (err, results) => {
+      if (err) {
+        throw err;
+      }
+      console.log(results.rows);
+
+      if (results.rows.lenght > 0) {
+        const user = results.rows[0];
+
+        bcrypt.compare(password, user.password, (err, isMatch) => {
+          if (err) {
+            throw err;
+          }
+
+          if (isMatch) {
+            res.send(null, user);
+          } else {
+            res.send(null, false, { message: "Password is incorect" });
+          }
+        });
+      } else {
+        res.send(null, false, { message: "Email is not registered" });
+      }
+    }
+  );
 });
 
 //server port
