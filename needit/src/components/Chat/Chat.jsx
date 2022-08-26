@@ -40,31 +40,30 @@ const theme = {
   botFontColor: 'white',
   userBubbleColor: '#FF5733',
   userFontColor: 'white',
+
 };
 
 // Set some properties of the bot
 const config = {
-  botAvatar: "https://banner2.cleanpng.com/20190628/wtz/kisspng-chatbot-oneplus-5t-emoji-android-human-skin-color-5d1645f19dd8c4.5226370815617407856465.jpg",
+
+  botAvatar: "img.png",
   floating: true,
 };
 function Chat() {
   return (
-<div className="Chat">
-    
-    <ThemeProvider theme={theme}>
-                <ChatBot
- 
-                    // This appears as the header
-                    // text for the chat bot
-                    headerTitle="chat"
-                    steps={steps}
-                    {...config}
- 
-                />
-            </ThemeProvider>
-    
+    <div className="Chat">
+      <ThemeProvider theme={theme}>
+        <ChatBot
+          // This appears as the header
+          // text for the chat bot
+          headerTitle="chat"
+          steps={steps}
+          {...config}
+        />
+      </ThemeProvider>
     </div>
-  )
+  );
 }
 
-export default Chat
+export default Chat;
+ 

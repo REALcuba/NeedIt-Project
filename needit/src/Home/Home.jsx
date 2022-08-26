@@ -10,7 +10,7 @@ import SearchSection from "../components/SearchSection/SearchSection";
 // import MenuBtn from "../components/MenuBtn/MenuBtn";
 function Home() {
   return (
-    <div className="home">
+    <div className="container-fluid">
       <SearchSection />
       <CategorieSlider />
     </div>

@@ -1,38 +1,17 @@
-.categories{
-    /* width: 100%; */
+/* .categories{
+    width: 100%;
     background-color: white;
 
-    /* height: 352px; */
-    /* display: block; */
+    height: 400px;
+    display: block;
     padding: 0 40px;
-}
+} */
 
  
 .categorySlider{
     width: 79%;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
-.slick-track{
-    width: 90%; 
-    height: 300px;
-}
-
-.slick-slider {
-   margin: -41px 38px;
-    width: 95%;
-}
-/* .slick-list {
-    
-    margin: 0 -10px;
-
-  } */
- .slick-arrow{
-    background-color:rgb(70 237 155 / 73%);
-    
- }
-.slick-arrow button :hover {
-    background-color: rgb(32, 32, 187);
- }

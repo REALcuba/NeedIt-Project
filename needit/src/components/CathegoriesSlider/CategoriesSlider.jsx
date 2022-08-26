@@ -33,7 +33,7 @@ export default function CategorieSlider () {
   // }
   
     return (
-      <div className="categories">
+      <div className="categories container">
         <h2>Categories</h2>
         
         <Slider/>

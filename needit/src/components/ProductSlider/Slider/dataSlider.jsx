@@ -18,7 +18,7 @@ export const dataSlider = [
     "https://pages.am-usercontent.com/images/a809c496a118f66db86cf258d41d816782328060/image_upload_71183cdd31f245589b6ba7f8e5aeea39.jpeg"  },
   {
     id: 2,
-    name:"PC",
+    name:"Electronics",
     width: 230,
     height: 230,
     img: 
