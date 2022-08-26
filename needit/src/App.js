@@ -15,6 +15,8 @@ import Profile from "./components/Profile/Profile";
 import ProductPage from "./components/ProductPage/ProductPage";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
+import Chat from "./components/Chat/Chat";
+
 
 function App() {
   return (
@@ -29,11 +31,13 @@ function App() {
           <Route path="/product" element={<ProductPage />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/about" element={<About />} />
+          {/* <Route path="/chat" element={<Chat />} /> */}
+          
         </Routes>
       <Footer />
       </BrowserRouter>
       {/* <ProductSlider /> */}
-
+ <Chat /> 
     </div>
   );
 }
