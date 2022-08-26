@@ -97,6 +97,7 @@ app.post("/users/login", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
+  // check if the user exsit
   pool.query(
     "SELECT * FROM signup WHERE email = $1",
     [email],

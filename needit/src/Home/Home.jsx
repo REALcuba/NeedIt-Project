@@ -1,7 +1,4 @@
-// import logo from "./img/NeedIt.gif";
-// import "./App.css";
 import React from "react";
-// import {Link} from "react-router-dom"
 
 
 // components
@@ -9,16 +6,13 @@ import React from "react";
 // import ProductSlider from "./components/ProductSlider/ProductSlider";
 import CategorieSlider from "../components/CathegoriesSlider/CategoriesSlider";
 import SearchSection from "../components/SearchSection/SearchSection";
-import Footer from "../components/Footer/Footer";
 
+// import MenuBtn from "../components/MenuBtn/MenuBtn";
 function Home() {
   return (
     <div className="home">
-      {/* <Header /> */}
       <SearchSection />
       <CategorieSlider />
-      <Footer />
-     
     </div>
   );
 }

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./style.css";
 
 function Signup() {
@@ -12,6 +14,9 @@ function Signup() {
   const Register = (e) => {
     console.log("form is executed");
     e.preventDefault();
+
+    // to clear the input after submited
+    e.target.reset();
 
     fetch("http://localhost:5000/users", {
       method: "POST",
@@ -98,7 +103,7 @@ function Signup() {
 
         <button type="submit">Sign Up</button>
 
-        <a href="/login">Already registered? Login here</a>
+        <Link to="/login"> Already registered? Login here</Link>
       </form>
     </div>
   );

@@ -1,27 +1,26 @@
-.footerDiv{
-    /* height: 60px; */
-    padding-bottom: 10px;
-    background-color: #ccc;
-    background-image: linear-gradient(to top left,#b9ff00, #cccc4b, green)
+.footerDiv {
+  /* height: 60px; */
+  /* position: fixed; */
+
+  width: 100%;
+  margin-top: 70px;
+  bottom: 0;
+  padding-bottom: 10px;
+  background-color: #ccc;
+  background-image: linear-gradient(to top left, #b9ff00, #cccc4b, green);
+}
+.footerDiv a {
+  text-decoration: none;
 }
 .migracodeDiv img {
-width: 60px;
-
-}
-.migracodeLogo{
-    display: flex;
-    justify-content: space-around;
-    width: 144px;
-    text-decoration: none;
-    color: rgb(46, 45, 45);
-    padding-top: 5px;
-
+  width: 60px;
 }
 
-.aboutDiv{
-    display: flex;
-    padding: 5px px;
-    width: 4em;
-    
+.migracodeLogo {
+  display: flex;
+  justify-content: space-around;
+  width: 144px;
+  text-decoration: none;
+  color: rgb(46, 45, 45);
+  padding-top: 5px;
 }
-

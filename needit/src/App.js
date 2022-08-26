@@ -1,22 +1,19 @@
-// import logo from "./img/NeedIt.gif";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 //boostrap
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SignUp from "./components/SignUp/Register";
-import Login from "./components/Login/Login";
 // components
-import Header from "./components/Header/Header.jsx";
 import Home from "./Home/Home";
-// import ProductSlider from "./components/ProductSlider/ProductSlider";
-// import CategorieSlider from "./components/CathegoriesSlider/CategoriesSlider";
-// import SearchSection from "./components/SearchSection/SearchSection";
-// import Footer from "./components/Footer/Footer";
+import SignUp from "./components/SignUp/Register";
+import Register from "./components/SignUp/Register";
+import Login from "./components/Login/Login";
+import Header from "./components/Header/Header.jsx";
+import Profile from "./components/Profile/Profile";
+import ProductPage from "./components/ProductPage/ProductPage";
+import Footer from "./components/Footer/Footer";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -26,11 +23,16 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/Register" element={<SignUp />} />
+          <Route path="/register" element={<SignUp />} />
+          <Route path="/login" element={<Register />} />
+          <Route path="/product" element={<ProductPage />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/about" element={<About />} />
         </Routes>
+      <Footer />
       </BrowserRouter>
-
       {/* <ProductSlider /> */}
+
     </div>
   );
 }
