@@ -1,7 +1,17 @@
 .carousel_wrapper{
+<<<<<<< HEAD:needit/src/components/Carousel/carousel.css
+    width: 70%;
+=======
     width:  60%;
+>>>>>>> origin/angel:needit/src/components/ProductSlider/productSlider.css
     /* height: 10em; */
-    background-color: aliceblue;
+    background-color: #56c9b6;;
     color: black;
+<<<<<<< HEAD:needit/src/components/Carousel/carousel.css
+}
+.carousel_wrapper h1{
+    margin:1rem 0;
+=======
     margin: 8px;
+>>>>>>> origin/angel:needit/src/components/ProductSlider/productSlider.css
 }

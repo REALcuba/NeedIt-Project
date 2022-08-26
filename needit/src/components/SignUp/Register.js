@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./style.css";
 
 function Signup() {
@@ -12,6 +14,9 @@ function Signup() {
   const Register = (e) => {
     console.log("form is executed");
     e.preventDefault();
+
+    // to clear the input after submited
+    e.target.reset();
 
     fetch("http://localhost:5000/users", {
       method: "POST",
@@ -33,11 +38,12 @@ function Signup() {
 
   return (
     <div className="Signup">
-      <form className="registration" onSubmit={Register}>
+      <form className="registration" onSubmit={Register} method="POST">
         <h1>Sign Up</h1>
         <h3>Enter your personal details</h3>
         <input
           type="text"
+          name="name"
           placeholder=" Full name"
           required
           onChange={(e) => {
@@ -47,6 +53,7 @@ function Signup() {
 
         <input
           type="email"
+          name="email"
           placeholder="Email"
           required
           onChange={(e) => {
@@ -56,7 +63,8 @@ function Signup() {
 
         <input
           type="text"
-          placeholder="  City"
+          name="city"
+          placeholder="City"
           required
           onChange={(e) => {
             setcityReg(e.target.value);
@@ -65,6 +73,7 @@ function Signup() {
 
         <input
           type="text"
+          name="country"
           placeholder=" Country"
           required
           onChange={(e) => {
@@ -74,6 +83,7 @@ function Signup() {
 
         <input
           type="text"
+          name="username"
           placeholder="username"
           required
           onChange={(e) => {
@@ -83,6 +93,7 @@ function Signup() {
 
         <input
           type="password"
+          name="password"
           placeholder="password"
           required
           onChange={(e) => {
@@ -92,7 +103,7 @@ function Signup() {
 
         <button type="submit">Sign Up</button>
 
-        <a href="/login">Already registered? Login here</a>
+        <Link to="/login"> Already registered? Login here</Link>
       </form>
     </div>
   );

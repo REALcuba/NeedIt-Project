@@ -13,7 +13,7 @@ function Searchbar() {
             type="text"
             placeholder="Search here..."
           />
-          <input type="submit" className="Btn" value="search " />
+          <input type="submit" className="searchBarBtn Btn" value="search " />
         </div>
       </div>
     </div>
