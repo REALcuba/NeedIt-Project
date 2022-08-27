@@ -12,6 +12,10 @@
     background-color: #dcf695;
     align-items: center;
 }
+.aboutText{
+    font-size: 1em;
+    color: white;
+}
 .migracodeLink{
     text-decoration: none;
 }

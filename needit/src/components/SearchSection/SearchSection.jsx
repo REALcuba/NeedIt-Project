@@ -1,5 +1,7 @@
 import React from "react";
 import SearchBar from "../SearchBar/SearchBar";
+import dataSlider from "../ProductSlider/Slider/dataSlider";
+
 import "./searchSection.css";
 
 function SearchSection() {
@@ -9,7 +11,7 @@ function SearchSection() {
       <p>
         Give away things that you don't need <br></br>for those who need it
       </p>
-      <SearchBar />
+      <SearchBar placeholder="Search here..." data={dataSlider}/>
     </div>
   );
 }

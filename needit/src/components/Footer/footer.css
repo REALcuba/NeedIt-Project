@@ -6,10 +6,12 @@
     margin-top: 70px;
    bottom: 0;
     /* padding-bottom: 10px; */
-    background-color: #ccc;
-    background-image: linear-gradient(to top left,#b9ff00, #cccc4b, green)
+    background-color:#010201df;
+    /* background-image: linear-gradient(to top left,#b9ff00, #cccc4b, green) */
 }
-.footerDiv a{ text-decoration: none;}
+.footerDiv a{ 
+  text-decoration: none;
+}
 .migracodeDiv img {
   width: 100%;
   /* margin-top: 70px; */

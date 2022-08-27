@@ -1,4 +1,5 @@
 import React from 'react'
+import Slider from '../ProductSlider/Slider/Slider'
 
 import Searchbar from '../SearchBar/SearchBar'
 function ProductPage() {
@@ -6,7 +7,8 @@ function ProductPage() {
     <div className='productPageDiv'>
       <div ><Searchbar/></div>
       {/* /start your code below */}
-      <h2>ProductPage</h2>
+      <h2>ProductsPage</h2>
+      <Slider/>
       
     </div>
   )
