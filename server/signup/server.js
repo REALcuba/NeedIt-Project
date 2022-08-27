@@ -7,7 +7,7 @@ const session = require("express-session");
 const flash = require("express-flash");
 const passport = require("passport");
 
-const PORT = 5000;
+const PORT = (process.env.PORT || 5000);
 const app = express();
 
 app.use(bodyParser.json());
@@ -29,10 +29,10 @@ app.use(passport.session());
 
 //conected to postgres
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "signupsystemdb",
-  password: "barcelona",
+  user: "rscatwcrqqfpun",
+  host: "ec2-34-242-8-97.eu-west-1.compute.amazonaws.com",
+  database: "d4ec6gbku99lr0",
+  password: "d213f1a9525fd74d83f909c1be7210618ccb78f3695403138738b399ffc2b089",
   port: 5432,
 });
 
