@@ -1,10 +1,9 @@
-
 .loginform {
   max-width: 500px;
   margin: auto;
   padding: 10px;
 }
-h1 {
+.loginform h1 {
   margin: 40px;
   font-family: sans-serif;
   color: #1d6868;
