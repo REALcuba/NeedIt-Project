@@ -1,18 +1,26 @@
 .footerDiv{
     /* height: 60px; */
-    /* position: fixed; */
+   
     position: fixed;
     width: 100%;
     margin-top: 70px;
    bottom: 0;
-    padding-bottom: 10px;
-    background-color: #ccc;
-    background-image: linear-gradient(to top left,#b9ff00, #cccc4b, green)
+    /* padding-bottom: 10px; */
+    background-color:#010201df;
+    /* background-image: linear-gradient(to top left,#b9ff00, #cccc4b, green) */
 }
-.footerDiv a{ text-decoration: none;}
+.footerDiv a{ 
+  text-decoration: none;
+}
 .migracodeDiv img {
-width: 60px;
-
+  width: 100%;
+  /* margin-top: 70px; */
+  bottom: 0;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  /* padding-bottom: 10px; */
+  /* background-color: #ccc;
+  background-image: linear-gradient(to top left, #b9ff00, #cccc4b, green); */
 }
 
 .migracodeLogo{

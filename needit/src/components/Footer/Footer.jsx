@@ -22,12 +22,9 @@ function Footer()  {
           className="migracodeLogo"
         >
           <img src={migracodeLogo} alt="" />
-          Migracode
+          {/* Migracode */}
         </a>
-         {/* <Link to="/chat"> */}
-          {/* <Chat/> */}
-         
-      {/* </Link> */}
+    
 
       </div>
     </div>

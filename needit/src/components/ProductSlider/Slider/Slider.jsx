@@ -24,12 +24,15 @@ export default function Slider() {
   //    setSlideIndex(dataSlider.length)
   // }
   //   }
+  const handleClick = (e)=>{
+    console.log(e,"click to category");
+  }
   return (
   
     <div className=" container-slider container-fluid">
       {dataSlider.map((item) => (
-        <div className="categorySlider" key={item.id}>
-          <div className="row-sm-5">
+        <div className="categorySlider" key={item.id} onClick={(e)=>handleClick(e)}>
+          <div className="row-sm">
             <h2>{item.name}</h2>
             <img className="cardImg  " src={item.img} alt={item.name} />
           </div>

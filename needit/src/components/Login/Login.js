@@ -2,18 +2,16 @@ import React, { useState } from "react";
 import "./loginForm.css";
 import { Link } from "react-router-dom";
 
-
 function Login() {
   const [emailReg, setEmailReg] = useState("");
 
   const [passwordReg, setpasswordReg] = useState("");
 
   const Register = (e) => {
-    console.log("form is executed");
     e.preventDefault();
 
-    fetch("http://localhost:5000/users", {
-      method: "GET",
+    fetch("http://localhost:5000/users/login", {
+      method: "POST",
       body: JSON.stringify({
         email: emailReg,
 
