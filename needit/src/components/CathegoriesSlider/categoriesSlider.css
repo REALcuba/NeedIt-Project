@@ -1,17 +1,18 @@
-.categories{
-    width: 100%;
-    background-color: white;
-    height: 400px;
-    display: block;
-    padding: 0 40px;
+.categories {
+  width: 100%;
+  background-color: white;
+  margin: 50px;
+  height: 400px;
+  display: block;
+  padding: 0 40px;
 }
 
- 
-.categorySlider{
-    width: 79%;
-    display: flex;
-    justify-content: space-evenly;
-    /* flex-wrap: wrap; */
+.categorySlider {
+  width: 79%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  /* flex-wrap: wrap; */
 }
 .display-1{
     padding: 20px;

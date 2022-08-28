@@ -9,7 +9,7 @@
     background-color:#010201df;
     /* background-image: linear-gradient(to top left,#b9ff00, #cccc4b, green) */
 }
-.footerDiv a{ 
+.footerDiv a {
   text-decoration: none;
 }
 .migracodeDiv img {
@@ -32,4 +32,3 @@
     padding-top: 5px;
 
 }
-
