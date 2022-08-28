@@ -29,13 +29,16 @@ export default function Slider() {
   }
   return (
   
-    <div className=" container-slider container-fluid">
+    <div className=" container-slider container-fluid row">
       {dataSlider.map((item) => (
-        <div className="categorySlider" key={item.id} onClick={(e)=>handleClick(e)}>
-          <div className="row-sm">
+        <div className="col-sm " key={item.id} onClick={(e)=>handleClick(e)}>
+         <div >
+
+          <div >
             <h2>{item.name}</h2>
             <img className="cardImg  " src={item.img} alt={item.name} />
           </div>
+         </div>
         </div>
       ))}
       
