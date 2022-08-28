@@ -33,8 +33,8 @@ function App() {
           {/* <Route path="/chat" element={<Chat />} /> */}
           
         </Routes>
-      <Footer />
       <Chat /> 
+      <Footer />
       </BrowserRouter>
       {/* <ProductSlider /> */}
     </div>
