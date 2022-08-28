@@ -5,13 +5,13 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // components
-import Home from "./Home/Home";
-import SignUp from "./components/SignUp/Register";
-import Register from "./components/SignUp/Register";
-import Login from "./components/Login/Login";
+import Home from "./pages/Home/Home";
+import SignUp from "./pages/SignUp/Register";
+import Register from "./pages/SignUp/Register";
+import Login from "./pages/Login/Login";
 import Header from "./components/Header/Header.jsx";
-import Profile from "./components/Profile/Profile";
-import ProductPage from "./components/ProductPage/ProductPage";
+import Profile from "./pages/Profile/Profile";
+import ProductPage from "./pages/ProductPage/ProductPage";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Chat from "./components/Chat/Chat";
@@ -33,8 +33,8 @@ function App() {
           {/* <Route path="/chat" element={<Chat />} /> */}
           
         </Routes>
-      <Footer />
       <Chat /> 
+      <Footer />
       </BrowserRouter>
       {/* <ProductSlider /> */}
     </div>
