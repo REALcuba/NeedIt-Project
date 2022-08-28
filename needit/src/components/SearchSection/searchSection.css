@@ -1,7 +1,8 @@
 .searchSection {
   max-width: 100%;
   color: #fff;
-  background-image: url("../../img/home_page_collage.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.7)),
+    url("../../img/home_page_collage.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,6 +24,6 @@
   font-size: 30px;
 }
 .searchBarDiv {
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center;
+}
