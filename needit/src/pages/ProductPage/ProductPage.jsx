@@ -1,7 +1,7 @@
 import React from 'react'
-import Slider from '../ProductSlider/Slider/Slider'
+import Slider from '../../components/ProductSlider/Slider/Slider'
 
-import Searchbar from '../SearchBar/SearchBar'
+import Searchbar from '../../components/SearchBar/SearchBar'
 function ProductPage() {
   return (
     <div className='productPageDiv'>

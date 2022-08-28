@@ -1,7 +1,7 @@
 import React from "react";
 
 
-import SignUp from "../SignUp/Register";
+import SignUp from "../../pages/SignUp/Register";
 function SignUpBtn() {
   return (
     <div>
