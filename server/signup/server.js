@@ -6,6 +6,7 @@ const cors = require("cors");
 const session = require("express-session");
 const flash = require("express-flash");
 const passport = require("passport");
+import DBP from "./conect"
 
 const PORT = (process.env.PORT || 5000);
 const app = express();
@@ -32,7 +33,7 @@ const pool = new Pool({
   user: "rscatwcrqqfpun",
   host: "ec2-34-242-8-97.eu-west-1.compute.amazonaws.com",
   database: "d4ec6gbku99lr0",
-  password: "",
+  password: {DBP},
   port: 5432,
 });
 

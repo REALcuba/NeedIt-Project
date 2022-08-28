@@ -4,24 +4,31 @@ import { useState } from "react";
 //style
 import "./searchBar.css";
 import dataSlider from "../ProductSlider/Slider/dataSlider";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 function Searchbar({placeholder, data}) {
 const[filteredData, setFilteredData] = useState([]);
 
 const handleFilter =(event) =>{
-const searchWord = event.target.value;
+  const searchWord = event.target.value;
 const newFilter = dataSlider.filter((value)=>{
-return value.name.toLowerCase().includes(searchWord.toLowerCase);
-})
+  return value.name.toLowerCase().includes(searchWord.toLowerCase);
+}
+)
 
-if(searchWord === ""){
+if(searchWord === " "){
   setFilteredData([])
 }else {
   setFilteredData(newFilter)
+  console.log(newFilter);
+
 }
+
 }
+// const handleClick =()=>{
+// console.log(newFilter); 
+// }
 
   return (
     <div>
@@ -36,7 +43,10 @@ if(searchWord === ""){
           <input type="submit"
            className="searchBarBtn Btn" 
            value="search "
-           onClick={<Link to="product"></Link>} />
+          //  onClick={()=> {
+          //   console.log(newFilter);
+          //  }} 
+           />
         </div>
       </div>
     </div>
