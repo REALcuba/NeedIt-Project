@@ -12,24 +12,45 @@ const[filteredData, setFilteredData] = useState([]);
 
 const handleFilter =(event) =>{
   const searchWord = event.target.value;
-const newFilter = dataSlider.filter((value)=>{
-  return value.name.toLowerCase().includes(searchWord.toLowerCase);
+  console.log(searchWord);
+  const newFilter = dataSlider.filter((value)=>{
+    return value.name.toLowerCase().includes(searchWord.toLowerCase());
+  });
+  
+  if(searchWord === filteredData){
+    setFilteredData([])
+  }else {
+    setFilteredData(newFilter)
+    
 }
+
+  
+}
+const handleClick =()=>{ 
+  // const searchWord = event.target.value;
+  // const newFilter = dataSlider.filter((value)=>{
+  //   value.name.toLowerCase().includes(searchWord.toLowerCase());
+  // });
+  <ul>
+
+{dataSlider.map(data =>{
+ console.log(data.name);
+ return <li className="container-sm "key={data.id}>
+ { data.name
+ }
+ </li>
+  
+}
+
 )
-
-if(searchWord === ""){
-  setFilteredData([])
-  console.log(newFilter);
-}else {
-  setFilteredData(newFilter)
-
 }
+</ul>
+console.log(data.name);
+  
+  // if (data.includes(newFilter)){
 
+  // }
 }
-// const handleClick =()=>{
-// console.log(newFilter); 
-// }
-
   return (
     <div>
       <div className="searchBarDiv container d-flex flex-grow-1 ">
@@ -43,9 +64,7 @@ if(searchWord === ""){
           <input type="submit"
            className="searchBarBtn Btn" 
            value="search "
-          //  onClick={()=> {
-          //   console.log(newFilter);
-          //  }} 
+           onClick={handleClick} 
            />
         </div>
       </div>
