@@ -17,11 +17,11 @@ const newFilter = dataSlider.filter((value)=>{
 }
 )
 
-if(searchWord === " "){
+if(searchWord === ""){
   setFilteredData([])
+  console.log(newFilter);
 }else {
   setFilteredData(newFilter)
-  console.log(newFilter);
 
 }
 
@@ -32,10 +32,10 @@ if(searchWord === " "){
 
   return (
     <div>
-      <div className="searchBarDiv">
-        <div className="searchBarWrapper">
+      <div className="searchBarDiv container d-flex flex-grow-1 ">
+        <div className="searchBarWrapper d-flex flex-grow-1 align-items-center">
           <input
-            className="searchBar"
+            className="searchBar flex-fill"
             type="text"
             placeholder={placeholder}
             onChange={handleFilter}
