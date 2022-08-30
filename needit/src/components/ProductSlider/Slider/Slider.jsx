@@ -35,7 +35,7 @@ export default function Slider() {
          <div >
 
           <div >
-            <h2>{item.name}</h2>
+            <h2 className="display-4">{item.name}</h2>
             <img className="cardImg  " src={item.img} alt={item.name} />
           </div>
          </div>
