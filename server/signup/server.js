@@ -6,9 +6,9 @@ const cors = require("cors");
 const session = require("express-session");
 const flash = require("express-flash");
 const passport = require("passport");
-import{ DBP }from "./conect.mjs"
+const {DBP} = require ("./conect.js");
 
-const PORT = (process.env.PORT || 5000);
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(bodyParser.json());
@@ -33,9 +33,9 @@ const pool = new Pool({
   user: "realcuba",
   host: "frankfurt-postgres.render.com",
   database: "needit",
-  password: {DBP},
+  password: { DBP },
   port: 5432,
-  ssl:true
+  ssl: true,
 });
 
 app.use(express.urlencoded({ extended: false }));

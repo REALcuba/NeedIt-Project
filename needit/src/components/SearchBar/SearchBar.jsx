@@ -53,7 +53,7 @@ console.log(data.name);
 }
   return (
     <div>
-      <div className="searchBarDiv container d-flex flex-grow-1 ">
+      <div className="searchBarDiv container d-flex  ">
         <div className="searchBarWrapper d-flex flex-grow-1 align-items-center">
           <input
             className="searchBar flex-fill"
