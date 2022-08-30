@@ -32,7 +32,7 @@ function Header() {
             </Link>
           </li>
 
-          <li className="Btn">
+          <li className="nav-item Btn">
             <Link to="/register">
               <SignUpBtn />
             </Link>
