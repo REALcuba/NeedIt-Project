@@ -1,5 +1,10 @@
 .categories {
   background-color: white;
+  margin-top: 40px;
+  height: 400px;
+  display: block;
+  padding: 0 40px;
+
 }
 
 .categorySlider {
