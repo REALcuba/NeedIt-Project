@@ -1,5 +1,5 @@
 .searchSection {
-  max-width: 100%;
+  width: 100%;
   color: #fff;
   background-image: linear-gradient(
       rgba(65, 62, 62, 0.527),
@@ -13,21 +13,21 @@
   padding: 50px;
   font-family: sans-serif;
 }
-.searchBarDiv {
-  width: 50%;
-}
+
 
 .searchSection h1 {
-  font-size: 70px;
+  /* font-size: 6.5vw; */
   font-weight: bold;
   margin-top: 50px;
   color: #adebce;
 }
 
-.searchSection p {
-  font-size: 30px;
-}
+/* .searchSection p {
+  font-size: 2.5vw;
+} */
 .searchBarDiv {
+width: 50%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
