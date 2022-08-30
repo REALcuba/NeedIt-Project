@@ -6,7 +6,7 @@ const cors = require("cors");
 const session = require("express-session");
 const flash = require("express-flash");
 const passport = require("passport");
-const { DBP } = require("./conect.mjs");
+const {DBP} = require ("./conect.js");
 
 const PORT = process.env.PORT || 5000;
 const app = express();
