@@ -21,6 +21,11 @@ function Header() {
       </div>
       <div>
         <ul className="navbar-nav navBar_wrapper">
+        <li className="nav-item">
+            <Link to="/" className="login">
+              Home
+            </Link>
+          </li>
           <li className="nav-item">
             <Link to="/login" className="nav-link">
               <LoginBtn />
@@ -35,20 +40,27 @@ function Header() {
         </ul>
       </div>
 
-      {/* <MenuBtn/> */}
-
-      {/* <li className="nav-item"><Link to="/product">
-            <ProductPageBtn />
-          </Link></li> */}
       <div className="menuIcon">
-        <div
-          
-          className="nav-link dropdown-toggle "
-          data-bs-toggle="dropdown"
-        >
+        <div className="nav-link dropdown-toggle " data-bs-toggle="dropdown">
           <img src={menuImg}  className="menuImg" alt="menu" />
         </div>
         <ul class="dropdown-menu dropdown-menu-end">
+         <li>
+            {" "}
+            <Link to="/" className="dropdown-item">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/login" className="dropdown-item">
+              Login
+            </Link>
+          </li>
+          <li>
+            <Link to="/register" className="dropdown-item">
+              SignUp
+            </Link>
+          </li>
           <li>
             <Link className="dropdown-item" to="/profile">
               Profile
