@@ -1,13 +1,15 @@
 import React from 'react'
+import "./productPage.css"
+
 import Slider from '../../components/ProductSlider/Slider/Slider'
 
 import Searchbar from '../../components/SearchBar/SearchBar'
 function ProductPage() {
   return (
-    <div className='productPageDiv'>
+    <div className='productPageDiv container-fluid'>
       <div ><Searchbar/></div>
       {/* /start your code below */}
-      <h2>ProductsPage</h2>
+      <h2 className='display-3'>ProductsPage</h2>
       <Slider/>
       
     </div>

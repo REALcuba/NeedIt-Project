@@ -73,7 +73,7 @@
 .dropdown-item {
   cursor: pointer;
 }
-@media (min-width: 500px) {
+@media (min-width: 601px) {
   .menuIcon {
     display: none;
     margin-bottom: 10px;

@@ -27,12 +27,17 @@ function Header() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link to="/" className="login">
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link to="/login" className="nav-link">
               <LoginBtn />
             </Link>
           </li>
 
-          <li className="nav-item">
+          <li className="nav-item Btn">
             <Link to="/register">
               <SignUpBtn />
             </Link>
@@ -42,10 +47,29 @@ function Header() {
 
       <div className="menuIcon">
         <div className="nav-link dropdown-toggle " data-bs-toggle="dropdown">
-          <img src={menuImg}  className="menuImg" alt="menu" />
+
+          <img src={menuImg} className="menuImg" alt="menu" />
+
+
         </div>
         <ul class="dropdown-menu dropdown-menu-end">
          <li>
+            {" "}
+            <Link to="/" className="dropdown-item">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/login" className="dropdown-item">
+              Login
+            </Link>
+          </li>
+          <li>
+            <Link to="/register" className="dropdown-item">
+              SignUp
+            </Link>
+          </li>
+          <li>
             {" "}
             <Link to="/" className="dropdown-item">
               Home
