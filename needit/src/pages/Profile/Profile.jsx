@@ -3,7 +3,8 @@ import React from "react";
 //style
 import "./profile.css";
 import blank from "../../img/blank.jpg";
-// import { Link } from "react-router-dom";
+import DonateBtn from "../../components/DonateBtn/DonateBtn"
+import { Link } from "react-router-dom";
 function Profile() {
   return (
     
@@ -23,6 +24,11 @@ function Profile() {
              </div>
             </div>
           </div>
+        </div> 
+        <div>
+        <Link to="/donate">    
+          <DonateBtn/>
+            </Link>
         </div>
         <div>user products</div>
       </div>
