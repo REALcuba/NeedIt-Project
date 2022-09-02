@@ -30,13 +30,14 @@ app.use(passport.session());
 
 //conected to postgres
 const pool = new Pool({
-  user: "realcuba",
-  host: "frankfurt-postgres.render.com",
-  database: "needit",
-  password: { connect },
-  port: 5432,
-  ssl: true,
+  user: "postgres",
+  host: "containers-us-west-55.railway.app",
+  database: "railway",
+  // password: "",
+  port: 7481
+  // ssl: true,
 });
+
 
 app.use(express.urlencoded({ extended: false }));
 
