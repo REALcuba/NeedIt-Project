@@ -3,7 +3,7 @@ import React from "react";
 // import Auth from "../Auth/Auth";
 // import Login from "../Login/Login";
 
-import Login from "../Login/Login"
+import Login from "../../pages/Login/Login"
 function LoginBtn() {
   return (
     <div>

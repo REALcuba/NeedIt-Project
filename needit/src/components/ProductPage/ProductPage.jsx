@@ -26,7 +26,7 @@ function ProductPage(props) {
         <h2 className='card_descrption'></h2>
         <button className='card_btn'></button>
       </div>
-      <Slider/>
+      
       
     </div>
   )

@@ -1,38 +1,29 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.Signup {
+.loginform {
   max-width: 500px;
   margin: auto;
   padding: 10px;
 }
-h1 {
-  margin: 20px;
+.loginform h1 {
+  margin: 40px;
   font-family: sans-serif;
   color: #1d6868;
   font-weight: bold;
 }
-h3 {
-  font-size: 15px;
-  color: #1d6868;
-  text-align: left;
-}
-.registration {
-  display: flex;
+
+.loginmember {
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
-  width: 481px;
-  height: 650px;
+  /* width: 481px;
+  height: 500px; */
   background-color: #92c6c6;
   border-radius: 30px;
-  padding: 20px;
+  margin-top: 50px;
 }
 
-.registration input {
-  width: 303px;
-  height: 50px;
+.loginmember input {
+  width: 85%;
+  /* height: 50px; */
   border-radius: 20px;
   margin: 10px;
   background-color: #d9d9d9;
@@ -51,7 +42,6 @@ button {
   color: #175454;
   cursor: pointer;
   text-align: center;
-
   font-size: 20px;
   font-weight: bold;
   margin: 15px;

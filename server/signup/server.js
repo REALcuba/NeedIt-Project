@@ -6,9 +6,9 @@ const cors = require("cors");
 const session = require("express-session");
 const flash = require("express-flash");
 const passport = require("passport");
-import DBP from "./conect"
+const {DBP} = require ("./conect.js");
 
-const PORT = (process.env.PORT || 5000);
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(bodyParser.json());
@@ -30,11 +30,12 @@ app.use(passport.session());
 
 //conected to postgres
 const pool = new Pool({
-  user: "rscatwcrqqfpun",
-  host: "ec2-34-242-8-97.eu-west-1.compute.amazonaws.com",
-  database: "d4ec6gbku99lr0",
-  password: {DBP},
+  user: "realcuba",
+  host: "frankfurt-postgres.render.com",
+  database: "needit",
+  password: { DBP },
   port: 5432,
+  ssl: true,
 });
 
 app.use(express.urlencoded({ extended: false }));

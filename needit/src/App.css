@@ -25,6 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
+ 
 	line-height: 1;
 }
 ol, ul {
@@ -43,6 +44,7 @@ table {
 	border-spacing: 0;
 }
 .App {
+  height: 125vh;
   text-align: center;
 }
 

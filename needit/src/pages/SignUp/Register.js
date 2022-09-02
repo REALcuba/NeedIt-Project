@@ -37,11 +37,18 @@ function Signup() {
   };
 
   return (
-    <div className="Signup">
-      <form className="registration" onSubmit={Register} method="POST">
+    <div className="Signup d-flex justify-content-center ">
+      <form
+        className="registration p-5 d-flex justify-content-center align-items-center"
+        onSubmit={Register}
+        method="POST"
+      >
         <h1>Sign Up</h1>
         <h3>Enter your personal details</h3>
+        
+
         <input
+          className="form-control"
           type="text"
           name="name"
           placeholder=" Full name"
@@ -50,8 +57,10 @@ function Signup() {
             setUsernameReg(e.target.value);
           }}
         ></input>
+       
 
         <input
+          className="form-control"
           type="email"
           name="email"
           placeholder="Email"
@@ -62,6 +71,7 @@ function Signup() {
         ></input>
 
         <input
+          className="form-control"
           type="text"
           name="city"
           placeholder="City"
@@ -72,6 +82,7 @@ function Signup() {
         ></input>
 
         <input
+          className="form-control"
           type="text"
           name="country"
           placeholder=" Country"
@@ -82,6 +93,7 @@ function Signup() {
         ></input>
 
         <input
+          className="form-control"
           type="text"
           name="username"
           placeholder="username"
@@ -92,6 +104,7 @@ function Signup() {
         ></input>
 
         <input
+          className="form-control"
           type="password"
           name="password"
           placeholder="password"
