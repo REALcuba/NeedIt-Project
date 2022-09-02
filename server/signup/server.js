@@ -33,7 +33,7 @@ const pool = new Pool({
   user: "realcuba",
   host: "frankfurt-postgres.render.com",
   database: "needit",
-  password: { DBP },
+  password: { connect },
   port: 5432,
   ssl: true,
 });

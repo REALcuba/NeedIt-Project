@@ -59,7 +59,7 @@ function Searchbar({ placeholder, data }) {
         <div className="searchBarWrapper d-flex flex-grow-1 align-items-center">
           <input
             className="searchBar flex-fill"
-            type="text"
+            type="search"
             placeholder={placeholder}
             onChange={handleFilter}
           />

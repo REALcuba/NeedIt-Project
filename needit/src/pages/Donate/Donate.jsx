@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState , useRef} from "react";
+// import { Link } from "react-router-dom";
+// import SearchIcon from '@mui/icons-material/Search';
 
 function Donate() {
 //   const [productInfo, setProductInfo] = useState("");
@@ -9,10 +10,11 @@ function Donate() {
   const [cathegory, setCathegory] = useState("");
   const [Pictures, setPictures] = useState([]);
 
-  // const handleChange =(event) =>{
-  //     setProductInfo(event.target.value);
-  //     console.log({setProductInfo});
-  // }
+  const selectedFile = useRef()
+  const uploader = async ()=> {
+// console.log(name);
+console.log(selectedFile);
+  }
 
   return (
     <div className="container">
@@ -70,9 +72,10 @@ function Donate() {
         <label for="pic" class="form-label">
           Imagen:
         </label>
-        <input
+        <input 
           className="form-control"
           type="file"
+          ref={selectedFile}
           placeholder="sube tus fotos"
           required
           onChange={(e) => {
@@ -80,7 +83,7 @@ function Donate() {
           }}
         ></input>
         {/* <h2>{productInfo}</h2> */}
-        <button type="submit">Donate</button>
+        <button type="submit" onClick={uploader}>Donate</button>
 
         {/* <Link to="/Register">Not member yet? signup here</Link> */}
       </form>
