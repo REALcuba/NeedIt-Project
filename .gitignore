@@ -1,5 +1,3 @@
 
 /node_modules
-
-
-server/signup/conect.js
+server/signup/connect.js
