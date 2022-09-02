@@ -8,7 +8,7 @@ function Donate() {
   const [status, setStatus] = useState("");
   const [description, setDescription] = useState("");
   const [cathegory, setCathegory] = useState("");
-  const [Pictures, setPictures] = useState([]);
+  const [pictures, setPictures] = useState([]);
 
   const selectedFile = useRef()
   const uploader = async ()=> {
@@ -30,6 +30,7 @@ console.log(selectedFile);
           required
           onChange={(e) => {
             setProduct(e.target.value);
+            console.log(product)
           }}
         //   value={productInfo}
         ></input>
@@ -43,6 +44,7 @@ console.log(selectedFile);
           required
           onChange={(e) => {
             setStatus(e.target.value);
+            console.log(status);
           }}
         ></input>
         <label for="cathegory" class="form-label">
@@ -55,6 +57,7 @@ console.log(selectedFile);
           required
           onChange={(e) => {
             setCathegory(e.target.value);
+            console.log(cathegory);
           }}
         ></input>
         <label for="description" class="form-label">
@@ -67,6 +70,8 @@ console.log(selectedFile);
           required
           onChange={(e) => {
             setDescription(e.target.value);
+            console.log(description);
+
           }}
         ></input>
         <label for="pic" class="form-label">
@@ -80,6 +85,7 @@ console.log(selectedFile);
           required
           onChange={(e) => {
             setPictures(e.target.value);
+            console.log(pictures);
           }}
         ></input>
         {/* <h2>{productInfo}</h2> */}
