@@ -6,66 +6,69 @@ import "./searchBar.css";
 import dataSlider from "../ProductSlider/Slider/dataSlider";
 // import { Link } from "react-router-dom";
 
+function Searchbar({ placeholder, data }) {
+  const [search, setsearch] = useState("");
 
-function Searchbar({placeholder, data}) {
-const[filteredData, setFilteredData] = useState([]);
+  const handleFilter = (event) => {
+    const searchWord = event.target.value;
+    const newFilter = dataSlider.filter((value) => {
+      
+      return  value.name.toLowerCase().includes(searchWord.toLowerCase());
+      
+      
+    });
 
-const handleFilter =(event) =>{
-  const searchWord = event.target.value;
-  console.log(searchWord);
-  const newFilter = dataSlider.filter((value)=>{
-    return value.name.toLowerCase().includes(searchWord.toLowerCase());
-  });
-  
-  if(searchWord === filteredData){
-    setFilteredData([])
-  }else {
-    setFilteredData(newFilter)
-    
-}
+    if (searchWord === newFilter) {
+      setsearch([]);
+    } else {
+      // setFilteredData(newFilter);
+      console.log(newFilter);
+    }
+  };
+  const handleClick = (event, data) => { handleFilter(data.name)
+    // const searchWord = event.target.value;
+    // const newFilter = dataSlider.filter((value)=>{
+    //   value.name.toLowerCase().includes(searchWord.toLowerCase());
+    // });
+   
+    //  return
+//  <div>
 
-  
-}
-const handleClick =()=>{ 
-  // const searchWord = event.target.value;
-  // const newFilter = dataSlider.filter((value)=>{
-  //   value.name.toLowerCase().includes(searchWord.toLowerCase());
-  // });
-  <ul>
+//     <ul>
+//       {dataSlider.map((data) => {
+//         if (handleFilter(data) === data.name) {
+//           <li className="container-sm " key={data.id}>
+//             {data.name}
+//           </li>;
+//         }
+//         console.log(event, data.name);
+//          return
+//       }
+//       )}
+//     console.log(data.name);
+//     </ul>;
+// </div>
 
-{dataSlider.map(data =>{
- console.log(data.name);
- return <li className="container-sm "key={data.id}>
- { data.name
- }
- </li>
-  
-}
+    // if (data.includes(newFilter)){
 
-)
-}
-</ul>
-console.log(data.name);
-  
-  // if (data.includes(newFilter)){
-
-  // }
-}
+    // }
+  };
   return (
     <div>
       <div className="searchBarDiv container d-flex  ">
         <div className="searchBarWrapper d-flex flex-grow-1 align-items-center">
           <input
             className="searchBar flex-fill"
-            type="text"
+            type="search"
             placeholder={placeholder}
             onChange={handleFilter}
           />
-          <input type="submit"
-           className="searchBarBtn Btn" 
-           value="search "
-           onClick={handleClick} 
-           />
+          <input
+            type="submit"
+            className="searchBarBtn Btn"
+            value="search "
+            onClick={handleClick}
+          />
         </div>
       </div>
     </div>
