@@ -32,8 +32,8 @@ app.use(passport.session());
 
 //conected to postgres
 const pool = new Pool({
-  user: "postgres",
-  host: "containers-PGHOSTus-west-55.railway.app",
+  user: "PGUSER",
+  host: "PGHOST",
   database: "PGDATABASE",
   password: "PGPASSWORD",
   port: "PGPORT",
@@ -41,11 +41,6 @@ const pool = new Pool({
 
   ssl: true
 });
-// # PGDATABASE="railway"
-// #  PGHOST='containers-us-west-55.railway.app'
-// #  PGPASSWORD="Pi60WLDNGirv0prz2r6QEhroGG2YiTsH"
-// #  PGPORT=7481
-// #  PGUSER="postgres"
 
 
 
@@ -143,5 +138,5 @@ app.post("/users/login", (req, res) => {
 
 //server port
 app.listen(PORT, () => {
-  console.log(`server ruuning on port ${PORT}`);
+  console.log(`server running on port ${PORT}`);
 });
