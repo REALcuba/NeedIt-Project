@@ -15,6 +15,7 @@ import ProductPage from "./pages/ProductPage/ProductPage";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Chat from "./components/Chat/Chat";
+import Donate from "./pages/Donate/Donate";
 import Basket from "./components/Basket/Basket.jsx"
 
 function App() {

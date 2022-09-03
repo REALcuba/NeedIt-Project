@@ -6,8 +6,10 @@ const cors = require("cors");
 const session = require("express-session");
 const flash = require("express-flash");
 const passport = require("passport");
-const {DBP} = require ("./connect.js");
 
+
+require("dotenv").config();
+console.log(process.env);
 const PORT = process.env.PORT || 5000;
 const app = express();
 
@@ -30,12 +32,20 @@ app.use(passport.session());
 
 //conected to postgres
 const pool = new Pool({
+<<<<<<< HEAD
   user: "realcuba",
   host: "frankfurt-postgres.render.com",
   database: "needit",
   password: 'Pi60WLDNGirv0prz2r6QEhroGG2YiTsH',
   port: 5432,
   ssl: true,
+=======
+  database: process.env.PGDATABASE,
+  host: process.env.PGHOST,
+  password: process.env.PGPASSWORD,
+  user: process.env.PGUSER,
+  port: process.env.PGPORT,
+>>>>>>> origin/develop
 });
 
 app.use(express.urlencoded({ extended: false }));
