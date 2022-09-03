@@ -18,7 +18,7 @@ function Signup() {
     // to clear the input after submited
     e.target.reset();
 
-    fetch("http://localhost:5000/users", {
+    fetch("https://localhost:5000/users", {
       method: "POST",
       body: JSON.stringify({
         name: usernameReg,

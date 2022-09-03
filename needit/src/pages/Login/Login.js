@@ -7,10 +7,18 @@ function Login() {
 
   const [passwordReg, setpasswordReg] = useState("");
 
+  const PGDATABASE="railway"
+  const PGHOST=`containers-us-west-55.railway.app`
+  // const PGPASSWORD=
+  const PGPORT=7481
+  const PGUSER="postgres"
+    const DATABASE_URL=`http://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}`
+
   const Register = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:5000/users/login", {
+ 
+    fetch( "https://localhost:5000/users", {
       method: "POST",
       body: JSON.stringify({
         email: emailReg,
@@ -31,7 +39,7 @@ function Login() {
         <h1>Member Login</h1>
 
         <input
-          className="form-control"
+        className="form-control"
           type="email"
           placeholder="Email"
           required
@@ -41,7 +49,7 @@ function Login() {
         ></input>
 
         <input
-          className="form-control"
+        className="form-control"
           type="password"
           placeholder="password"
           required
@@ -50,9 +58,7 @@ function Login() {
           }}
         ></input>
 
-        <button type="submit" onClick={Login}>
-          Login
-        </button>
+        <button type="submit" onClick={Register}>Login</button>
 
         <Link to="/Register">Not member yet? signup here</Link>
       </form>
