@@ -45,22 +45,7 @@ function Header() {
           <img src={menuImg} className="menuImg" alt="menu" />
         </div>
         <ul class="dropdown-menu dropdown-menu-end">
-          <li>
-            {" "}
-            <Link to="/" className="dropdown-item">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/login" className="dropdown-item">
-              Login
-            </Link>
-          </li>
-          <li>
-            <Link to="/register" className="dropdown-item">
-              SignUp
-            </Link>
-          </li>
+          
           <li>
             {" "}
             <Link to="/" className="dropdown-item">

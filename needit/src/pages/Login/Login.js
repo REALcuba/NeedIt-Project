@@ -7,13 +7,7 @@ function Login() {
 
   const [passwordReg, setpasswordReg] = useState("");
 
-  // const PGDATABASE="railway"
-  // const PGHOST=`containers-us-west-55.railway.app`
-  //  const PGPASSWORD=
-  // const PGPORT=7481
-  // const PGUSER="postgres"
-  //   const DATABASE_URL=`http://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}`
-
+ 
   const Register = (e) => {
     e.preventDefault();
 
