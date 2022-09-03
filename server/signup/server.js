@@ -32,8 +32,7 @@ app.use(passport.session());
 const pool = new Pool({
   user: "postgres",
   host: "containers-us-west-55.railway.app",
-  database: "railway",
-  // password: "",
+  database: "",
   port: 7481
   // ssl: true,
 });
