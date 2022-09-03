@@ -1,0 +1,23 @@
+.basket{
+    padding: 0 2rem;
+}
+.basket-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid gray;
+    margin-bottom: 2rem;
+    padding: 1rem ;
+}
+.basket-item-info{
+    display: flex;
+    align-items: center;
+
+}
+.basket-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 2rem;
+}
+
