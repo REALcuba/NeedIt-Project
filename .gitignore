@@ -6,7 +6,6 @@ server/signup/connect.js
 **/node_modules
 **/.pnp
 **/.pnp.js
-
 # testing
 **/coverage
 
