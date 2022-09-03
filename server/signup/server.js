@@ -6,7 +6,6 @@ const cors = require("cors");
 const session = require("express-session");
 const flash = require("express-flash");
 const passport = require("passport");
-const { DBP } = require("./connect.js");
 
 require("dotenv").config();
 console.log(process.env);
