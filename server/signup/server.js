@@ -6,8 +6,10 @@ const cors = require("cors");
 const session = require("express-session");
 const flash = require("express-flash");
 const passport = require("passport");
-const { DBP } = require("./connect.js");
 
+require('dotenv').config();
+
+console.log(process.env) 
 const PORT = process.env.PORT || 5000;
 const app = express();
 
@@ -31,12 +33,20 @@ app.use(passport.session());
 //conected to postgres
 const pool = new Pool({
   user: "postgres",
-  host: "containers-us-west-55.railway.app",
-  database: "railway",
-  // password: "",
-  port: 7481
-  // ssl: true,
+  host: "containers-PGHOSTus-west-55.railway.app",
+  database: "PGDATABASE",
+  password: "PGPASSWORD",
+  port: "PGPORT",
+ DATABASE_URL:'http://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}',
+
+  ssl: true
 });
+// # PGDATABASE="railway"
+// #  PGHOST='containers-us-west-55.railway.app'
+// #  PGPASSWORD="Pi60WLDNGirv0prz2r6QEhroGG2YiTsH"
+// #  PGPORT=7481
+// #  PGUSER="postgres"
+
 
 
 app.use(express.urlencoded({ extended: false }));
