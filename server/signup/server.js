@@ -7,8 +7,9 @@ const session = require("express-session");
 const flash = require("express-flash");
 const passport = require("passport");
 
-require("dotenv").config();
-console.log(process.env);
+require('dotenv').config();
+
+console.log(process.env) 
 const PORT = process.env.PORT || 5000;
 const app = express();
 
@@ -31,12 +32,17 @@ app.use(passport.session());
 
 //conected to postgres
 const pool = new Pool({
-  database: process.env.PGDATABASE,
-  host: process.env.PGHOST,
-  password: process.env.PGPASSWORD,
-  user: process.env.PGUSER,
-  port: process.env.PGPORT,
+  user: "PGUSER",
+  host: "PGHOST",
+  database: "PGDATABASE",
+  password: "PGPASSWORD",
+  port: "PGPORT",
+ DATABASE_URL:'http://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}',
+
+  ssl: true
 });
+
+
 
 app.use(express.urlencoded({ extended: false }));
 
@@ -132,5 +138,5 @@ app.post("/users/login", (req, res) => {
 
 //server port
 app.listen(PORT, () => {
-  console.log(`server ruuning on port ${PORT}`);
+  console.log(`server running on port ${PORT}`);
 });
