@@ -26,11 +26,12 @@ function Login() {
   };
 
   return (
-    <div className="loginform">
-      <form className="loginmember" onSubmit={Register}>
+    <div className="loginform d-flex justify-content-center align-items-center">
+      <form className="loginmember d-flex flex-column" onSubmit={Register}>
         <h1>Member Login</h1>
 
         <input
+          className="form-control"
           type="email"
           placeholder="Email"
           required
@@ -40,6 +41,7 @@ function Login() {
         ></input>
 
         <input
+          className="form-control"
           type="password"
           placeholder="password"
           required
@@ -48,7 +50,9 @@ function Login() {
           }}
         ></input>
 
-        <button type="submit">Login</button>
+        <button type="submit" onClick={Login}>
+          Login
+        </button>
 
         <Link to="/Register">Not member yet? signup here</Link>
       </form>
