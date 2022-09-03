@@ -57,7 +57,12 @@ const Basket = () => {
   return (
     <div className="basket">
       <h1>YOUR CART</h1>
-      <p>{products.length} items</p>
+
+      {products.length === 0 ? (
+        <p>There are no items in your cart </p>
+      ) : (
+        <p>{products.length} items</p>
+      )}
       {products.map((product) => (
         <Basketitem
           productList={products}
