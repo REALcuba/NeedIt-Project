@@ -7,10 +7,10 @@ function Login() {
 
   const [passwordReg, setpasswordReg] = useState("");
 
-  const Register = (e) => {
+  const Register = async (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:5000/users/login", {
+    const response = await fetch("http://localhost:5000/login", {
       method: "POST",
       body: JSON.stringify({
         email: emailReg,
@@ -23,6 +23,11 @@ function Login() {
       .then((data) => {
         console.log(data);
       });
+    if (response.isAuthenticated) {
+      <Link to="/" />;
+    } else {
+      <Link to="/Register" />;
+    }
   };
 
   return (
