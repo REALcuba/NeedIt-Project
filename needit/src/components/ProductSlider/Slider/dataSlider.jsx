@@ -12,12 +12,12 @@ export const dataSlider = [
   },
   {
     id: 1,
-    name:"Home",
+    name:"Furniture",
     width: 230,
     height: 230,
     img: 
     "https://pages.am-usercontent.com/images/a809c496a118f66db86cf258d41d816782328060/image_upload_71183cdd31f245589b6ba7f8e5aeea39.jpeg",
-    route: ""  },
+    route: "Furniture"  },
   {
     id: 2,
     name:"Electronics",
