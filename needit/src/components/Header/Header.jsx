@@ -21,11 +21,7 @@ function Header() {
       </div>
       <div>
         <ul className="navbar-nav navBar_wrapper">
-        <li className="nav-item">
-            <Link to="/" className="login">
-              Home
-            </Link>
-          </li>
+       
           <li className="nav-item">
             <Link to="/" className="login">
               Home

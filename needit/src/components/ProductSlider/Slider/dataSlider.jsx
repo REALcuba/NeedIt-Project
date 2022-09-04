@@ -7,7 +7,8 @@ export const dataSlider = [
     width: 230,
     height: 230,
     img: 
-      'https://images.pexels.com/photos/1884584/pexels-photo-1884584.jpeg?cs=srgb&dl=pexels-tembela-bohle-1884584.jpg&fm=jpg'
+      'https://images.pexels.com/photos/1884584/pexels-photo-1884584.jpeg?cs=srgb&dl=pexels-tembela-bohle-1884584.jpg&fm=jpg',
+      route: "clothes"
   },
   {
     id: 1,
@@ -15,14 +16,16 @@ export const dataSlider = [
     width: 230,
     height: 230,
     img: 
-    "https://pages.am-usercontent.com/images/a809c496a118f66db86cf258d41d816782328060/image_upload_71183cdd31f245589b6ba7f8e5aeea39.jpeg"  },
+    "https://pages.am-usercontent.com/images/a809c496a118f66db86cf258d41d816782328060/image_upload_71183cdd31f245589b6ba7f8e5aeea39.jpeg",
+    route: ""  },
   {
     id: 2,
     name:"Electronics",
     width: 230,
     height: 230,
     img: 
-    "https://hardzone.es/app/uploads-hardzone.es/2019/05/CORSAIR-VENGEANCE-5180-Gaming-PC.jpg"  },
+    "https://hardzone.es/app/uploads-hardzone.es/2019/05/CORSAIR-VENGEANCE-5180-Gaming-PC.jpg" ,
+  route: "electronics" },
   // {
   //   id: 3,
   //   name:"Food",
@@ -30,6 +33,7 @@ export const dataSlider = [
   //   height: 230,
   //   img: 
   //     "https://images.pexels.com/photos/1884584/pexels-photo-1884584.jpeg?cs=srgb&dl=pexels-tembela-bohle-1884584.jpg&fm=jpg"
+  //route: "food"
   // },
   // {
   //   id: 4,
@@ -38,6 +42,7 @@ export const dataSlider = [
   //   height: 230,
   //   img: 
   //     "https://images.pexels.com/photos/1884584/pexels-photo-1884584.jpeg?cs=srgb&dl=pexels-tembela-bohle-1884584.jpg&fm=jpg"
+  //route: "fun"
   // }
 
  
