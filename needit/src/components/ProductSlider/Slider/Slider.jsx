@@ -33,7 +33,7 @@ export default function Slider() {
     <div className=" container-slider container-fluid justify-content-around row">
       {dataSlider.map((item) => (
        <div className="col-sm " key={item.id} onClick={(e)=>handleClick(e)}>
-         <Link to="/"> 
+         <Link to={`/${item.route}`}> 
 
           <div >
             <h2 className="display-5">{item.name}</h2>
