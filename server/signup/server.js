@@ -6,6 +6,9 @@ const cors = require("cors");
 const generateJWT = require("./generateJWT");
 const authenticate = require("./authenticate");
 
+require("dotenv").config();
+
+console.log(process.env);
 const PORT = process.env.PORT || 5000;
 const app = express();
 
@@ -78,7 +81,7 @@ app.post("/users", async (req, res) => {
         res.status(400).send(`user with name  ${userName} already exist`);
       }
     })
-    .catch((error) => console.log("error validator user exsit" + error));
+    .catch((error) => console.log("error validator user exit" + error));
 });
 
 //Login endpoint
@@ -128,5 +131,5 @@ app.post("/auth", authenticate, (req, res) => {
 
 //server port
 app.listen(PORT, () => {
-  console.log(`server ruuning on port ${PORT}`);
+  console.log(`server running on port ${PORT}`);
 });

@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .Signup {
-  max-width: 500px;
+  /* max-width: 500px; */
   margin: auto;
   padding: 10px;
 }
@@ -23,16 +23,16 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 481px;
-  height: 650px;
+  /* width: 481px;
+  height: 650px; */
   background-color: #92c6c6;
   border-radius: 30px;
   padding: 20px;
 }
 
 .registration input {
-  width: 303px;
-  height: 50px;
+  /* width: 303px;
+  height: 50px; */
   border-radius: 20px;
   margin: 10px;
   background-color: #d9d9d9;

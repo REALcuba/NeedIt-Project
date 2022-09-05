@@ -34,7 +34,7 @@ export default function CategorieSlider () {
   
     return (
       <div className="categories container-fluid">
-        <h2 className="display-2">Categories</h2>
+        <h2 className="display-1">Categories</h2>
         
         <Slider/>
       </div>

@@ -15,7 +15,8 @@ import ProductPage from "./pages/ProductPage/ProductPage";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Chat from "./components/Chat/Chat";
-
+import Donate from "./pages/Donate/Donate";
+import Basket from "./components/Basket/Basket.jsx"
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
           <Route path="/product" element={<ProductPage />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Basket />}/>
+          <Route path="/donate" element={<Donate />}/>
           {/* <Route path="/chat" element={<Chat />} /> */}
           
         </Routes>

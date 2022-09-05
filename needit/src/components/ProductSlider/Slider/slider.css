@@ -6,7 +6,7 @@
   box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
   justify-content: space-between;
 }
-/*
+  /*
   @media screen and (max-width: 700px){
     .container-slider {
       margin: 100px 10px 0;
@@ -73,20 +73,21 @@
   .dot.active {
     background: rgb(32, 32, 32);
   } */
-/* new css */
-/* .card{
+  /* new css */
+  /* .card{
     width: 13em;
     border-radius: 7px;
     margin-top: 7px;
   } */
-.cardImg {
-  height: 150px;
-  max-width: 100%;
-  border-radius: 7px;
-  margin-top: 7px;
-}
-.slide img {
-  width: 79%;
-  height: auto;
-  object-fit: cover;
-}
+  .cardImg{
+    height: 9em;
+    width: 89%;
+    border-radius: 7px;
+    margin-top: 7px;
+  }
+  .slide img {
+  
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
