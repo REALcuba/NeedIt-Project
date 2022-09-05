@@ -44,6 +44,8 @@ app.post("/users", async (req, res) => {
   // hashedpassword
   const salt = await bcrypt.genSalt(10);
   const hashedPassword = await bcrypt.hash(req.body.password, salt);
+
+  // requstting data
   const userName = req.body.name;
   const userEmail = req.body.email;
   const userCity = req.body.city;
