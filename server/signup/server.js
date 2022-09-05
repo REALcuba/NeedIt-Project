@@ -7,9 +7,9 @@ const session = require("express-session");
 const flash = require("express-flash");
 const passport = require("passport");
 
-require('dotenv').config();
+require("dotenv").config();
 
-console.log(process.env) 
+console.log(process.env);
 const PORT = process.env.PORT || 5000;
 const app = express();
 
@@ -32,17 +32,16 @@ app.use(passport.session());
 
 //conected to postgres
 const pool = new Pool({
-  user: "PGUSER",
-  host: "PGHOST",
-  database: "PGDATABASE",
-  password: "PGPASSWORD",
-  port: "PGPORT",
- DATABASE_URL:'http://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}',
+  user: process.env.PGUSER,
+  host: process.env.PGHOST,
+  database: process.env.PGDATABASE,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT,
+  //  DATABASE_URL:'http://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}',
 
-  ssl: true
-});
-
-
+  sslmode: true,
+  
+}); 
 
 app.use(express.urlencoded({ extended: false }));
 
@@ -60,7 +59,7 @@ app.get("/home", (req, res) => {
     res.status(200).json(response.rows);
   });
 });
-
+ 
 // POST endpoint for signup
 app.post("/users", async (req, res) => {
   // hashedpassword
@@ -97,7 +96,7 @@ app.post("/users", async (req, res) => {
         res.status(400).send(`user with name  ${userName} already exist`);
       }
     })
-    .catch((error) => console.log("error validator user exsit" + error));
+    .catch((error) => console.log("error validator user exit" + error));
 });
 
 //Login endpoint
@@ -139,4 +138,4 @@ app.post("/users/login", (req, res) => {
 //server port
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
-});
+}); 
