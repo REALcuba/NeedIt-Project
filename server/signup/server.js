@@ -3,8 +3,8 @@ const { Pool } = require("pg");
 const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const generateJWT = require("../signup/generateJWT");
-const authenticate = require("../signup/authenticate");
+const generateJWT = require("./generateJWT");
+const authenticate = require("./authenticate");
 
 const PORT = process.env.PORT || 5000;
 const app = express();
@@ -14,11 +14,11 @@ app.use(cors()); // enable CORS
 
 //conected to postgres
 const pool = new Pool({
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  database: process.env.DB_DATADBASE,
-  password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT,
+  user: "realcuba",
+  host: "frankfurt-postgres.render.com",
+  database: "needit",
+  password: "Pi60WLDNGirv0prz2r6QEhroGG2YiTsH",
+  port: 5432,
   ssl: true,
 });
 
