@@ -6,72 +6,58 @@ import "./searchBar.css";
 import dataSlider from "../ProductSlider/Slider/dataSlider";
 // import { Link } from "react-router-dom";
 
-function Searchbar({ placeholder, data }) {
+function Searchbar({ placeholder, props }) {
   const [search, setsearch] = useState("");
+  const [dataList, setDataList] = useState(dataSlider);
 
-  const handleFilter = (event) => {
-    const searchWord = event.target.value;
+  const handleFilter = (e) => {
+    e.prevent.default();
+    const searchWord = e.target.value;
+
+    setsearch(searchWord);
+  };
+  const handleClick = (props) => {
     const newFilter = dataSlider.filter((value) => {
-      
-      return  value.name.toLowerCase().includes(searchWord.toLowerCase());
-      
+      if (value.name.toLowerCase().includes(search.toLowerCase())) {
+        return (
+          <div background-color="white">
+            {dataList.map((data) => (
+              <ul>
+                <li>{data.name}</li>
+              </ul>
+            ))}
+          </div>
+        );
+      }
+
+      return 
       
     });
 
-    if (searchWord === newFilter) {
-      setsearch(search);
-    } else {
-      // setFilteredData(newFilter);
-      console.log(newFilter);
-    }
-  };
-  const handleClick = (event, data) => { handleFilter(data.name)
-    // const searchWord = event.target.value;
-    // const newFilter = dataSlider.filter((value)=>{
-    //   value.name.toLowerCase().includes(searchWord.toLowerCase());
-    // });
-   
-    //  return
-//  <div>
-
-//     <ul>
-//       {dataSlider.map((data) => {
-//         if (handleFilter(data) === data.name) {
-//           <li className="container-sm " key={data.id}>
-//             {data.name}
-//           </li>;
-//         }
-//         console.log(event, data.name);
-//          return
-//       }
-//       )}
-//     console.log(data.name);
-//     </ul>;
-// </div>
-
-    // if (data.includes(newFilter)){
-
-    // }
+    setDataList(newFilter);
   };
   return (
-    <div>
-      <div className="searchBarDiv container d-flex  ">
-        <div className="searchBarWrapper d-flex flex-grow-1 align-items-center">
-          <input
-            className="searchBar flex-fill"
-            type="search"
-            placeholder={placeholder}
-            onChange={handleFilter}
-          />
-          <input
-            type="submit"
-            className="searchBarBtn Btn"
-            value="search "
-            onClick={handleClick}
-          />
+    <>
+      <div>
+        <div className="searchBarDiv container d-flex  ">
+          <div className="searchBarWrapper d-flex flex-grow-1 align-items-center">
+            <input
+              className="searchBar flex-fill"
+              type="search"
+              placeholder={placeholder}
+              onChange={handleFilter}
+            />
+            <input
+              type="submit"
+              className="searchBarBtn Btn"
+              value="search "
+              onClick={handleClick}
+            />
+          </div>
         </div>
+        <div></div>
       </div>
-    </div>
+    </>
   );
 }
 

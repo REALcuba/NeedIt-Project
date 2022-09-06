@@ -16,7 +16,7 @@ function Header() {
   return (
     // <div className="container">
 
-    <div className="navbar ">
+    <div className="navbar d-flex align-content-center">
       <div className=" navbar-brand">
         <Link to="/">
           <img src={main_logo} className="main_logo navbar-brand" alt="logo" />
@@ -24,7 +24,7 @@ function Header() {
       </div>
 
       <div>
-        {isLogged ? (
+        {!isLogged ? (
           <ul className="navbar-nav navBar_wrapper">
             <li className="nav-item">
               <Link to="/" className="login">
@@ -74,7 +74,7 @@ function Header() {
           <img src={menuImg} className="menuImg" alt="menu" />
         </div>
         
-          {isLogged ? (
+          {!isLogged ? (
             <ul class="dropdown-menu dropdown-menu-end">
               <li>
                 {" "}
