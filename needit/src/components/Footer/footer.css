@@ -1,7 +1,8 @@
 .footerDiv {
   max-width: 100%;
+  height: 200px;
   position: relative;
-  top: 10%;
+  top: 70%;
   background-color: #010201df;
 }
 .footerDiv a {

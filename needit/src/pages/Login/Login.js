@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import "./loginForm.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
   const [emailReg, setEmailReg] = useState("");
-
   const [passwordReg, setpasswordReg] = useState("");
+  const [anthenError, setAntenError] = useState(false);
 
-  const Register = async (e) => {
+  const Register = (e) => {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:5000/login", {
+    fetch("http://localhost:5000/login", {
       method: "POST",
       body: JSON.stringify({
         email: emailReg,
@@ -21,13 +23,15 @@ function Login() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        console.log(data.isAuthenticated);
+        setAntenError(true);
+        if (data.isAuthenticated) {
+          navigate("/");
+        } else if (data.error === "Password incorrect") {
+        } else {
+          navigate("/Register");
+        }
       });
-    if (response.isAuthenticated) {
-      <Link to="/" />;
-    } else {
-      <Link to="/Register" />;
-    }
   };
 
   return (
@@ -55,11 +59,14 @@ function Login() {
           }}
         ></input>
 
-        <button type="submit" onClick={Register}>
+        <button type="submit" onClick={Login}>
           Login
         </button>
-
-        <Link to="/Register">Not member yet? signup here</Link>
+        {anthenError ? (
+          <p className="text-success">you are login successfully</p>
+        ) : (
+          <Link to="/Register">Not member yet? signup here</Link>
+        )}
       </form>
     </div>
   );

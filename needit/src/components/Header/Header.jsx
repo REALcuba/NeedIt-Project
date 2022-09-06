@@ -24,11 +24,16 @@ function Header() {
       </div>
 
       <div>
-        {isLogged ? (
+        {!isLogged ? (
           <ul className="navbar-nav navBar_wrapper">
             <li className="nav-item">
               <Link to="/" className="login">
                 Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="login" to="product">
+                Products
               </Link>
             </li>
             <li className="nav-item">
@@ -68,56 +73,56 @@ function Header() {
           </ul>
         )}
       </div>
-{/* dropdown menu */}
+      {/* dropdown menu */}
       <div className="menuIcon">
         <div className="nav-link dropdown-toggle " data-bs-toggle="dropdown">
           <img src={menuImg} className="menuImg" alt="menu" />
         </div>
-        
-          {isLogged ? (
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li>
-                {" "}
-                <Link to="/" className="dropdown-item">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/login" className="dropdown-item">
-                  Login
-                </Link>
-              </li>
-              <li>
-                <Link to="/register" className="dropdown-item">
-                  SignUp
-                </Link>
-              </li>
-            </ul>
-          ) : (
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li>
-                <Link className="dropdown-item" to="/profile">
-                  Profile
-                </Link>
-              </li>
-              <li>
-                <Link className="dropdown-item" to="product">
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link className="dropdown-item" to="/about">
-                  About Us
-                </Link>
-              </li>
-              <li className="nav-item">
+
+        {!isLogged ? (
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              {" "}
+              <Link to="/" className="dropdown-item">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/login" className="dropdown-item">
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link to="/register" className="dropdown-item">
+                SignUp
+              </Link>
+            </li>
+          </ul>
+        ) : (
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <Link className="dropdown-item" to="/profile">
+                Profile
+              </Link>
+            </li>
+            <li>
+              <Link className="dropdown-item" to="product">
+                Products
+              </Link>
+            </li>
+            <li>
+              <Link className="dropdown-item" to="/about">
+                About Us
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link className="dropdown-item" to="/cart">
                 Basket
               </Link>
             </li>
-            </ul>
-          )}
-          
+          </ul>
+        )}
+
         {/* <ul class="dropdown-menu dropdown-menu-end">
           
           <li>

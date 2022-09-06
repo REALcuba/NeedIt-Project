@@ -107,12 +107,18 @@ app.post("/login", async (req, res) => {
     if (!isValidPassword) {
       return res
         .status(401)
-        .json({ error: "Password incorrect", isAuthenticated: false });
+        .json({ error: "Email or Password incorrect", isAuthenticated: false });
     }
     console.log(user[0].id);
     const jwtToken = generateJWT(user[0].id);
 
-    return res.status(200).send({ jwtToken, isAuthenticated: true });
+    return res
+      .status(200)
+      .send({
+        message: " You are logged in!",
+        jwtToken,
+        isAuthenticated: true,
+      });
   } catch (error) {
     console.error(error.message);
     res.status(500).send({ error: error.message });
@@ -122,7 +128,9 @@ app.post("/login", async (req, res) => {
 // user authorization
 app.post("/auth", authenticate, (req, res) => {
   try {
-    res.status(200).send({ isAuthenticated: true });
+    res
+      .status(200)
+      .send({ message: " You are logged in!", isAuthenticated: true });
   } catch (error) {
     console.error(error.message);
     res.status(500).send({ error: error.message, isAuthenticated: false });
