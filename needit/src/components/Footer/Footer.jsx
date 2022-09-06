@@ -1,26 +1,41 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import "./footer.css"
-import migracodeLogo from "../../img/migracodeLogo.png"
-
+import "./footer.css";
+import migracodeLogo from "../../img/migracodeLogo.png";
+// import Chat from "../Chat/Chat";
 //component
-import About from '../About/About'
-import AboutBtn from '../AboutBtn/AboutBtn'
 
-function Footer() {
+import AboutBtn from "../About/AboutBtn";
+
+
+
+function Footer()  {
   return (
-    <div className='footerDiv'>
-       
-        <Link to="/about">
-            <AboutBtn  />
-            </Link>
-            
-        <div className='migracodeDiv'>
-            <a href="https://migracode.openculturalcenter.org/" className='migracodeLogo' >
-                <img src= {migracodeLogo} alt="" />Migracode</a>
-        </div>
+
+    <div className="footerDiv">
+      <Link to="/about">
+        <AboutBtn />
+      </Link>
+
+      <div className="migracodeDiv">
+        <a
+          target="_blank "
+          href="https://migracode.openculturalcenter.org/"
+          className="migracodeLogo"
+        >
+          <img src={migracodeLogo} alt="" />
+          Migracode
+        </a>
+         {/* <Link to="/chat"> */}
+          {/* <Chat/> */}
+         
+      {/* </Link> */}
+
+      </div>
+
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

@@ -1,0 +1,16 @@
+.logo-container{
+    background-color: white;
+}
+
+.main-banner {
+    background-color: white;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(10px + 2vmin);
+    color:black;
+    padding-left: 100px;
+  }
+  

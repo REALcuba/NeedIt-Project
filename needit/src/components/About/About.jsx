@@ -1,27 +1,28 @@
-import React from 'react'
-import info from "./info.json"
-
-
+import React from "react";
+// import { Link } from 'react-router-dom';
+import info from "./info.json";
+import "./about.css";
 
 function About() {
-    const handleClick = (e) => {
-        // alert("this is a project to help those who need a freandly hand")
-        // console.log("about", e);
-        info.map((teamMember) => (
-          <div class="team-member">
-            <h2>{teamMember.name}</h2>
-            <img src={teamMember.img} />
-            <p>{teamMember.project}</p>
-            <p>{teamMember.contact}</p>
-          </div>
-        ));
-    }
   return (
-    <div className='aboutDiv'>
-
-        <i onClick={(e) => handleClick(e)}>About Us</i>
+    <div className="aboutDiv">
+      {info.map((teamMember) => (
+        <div className="container" key={teamMember.name}>
+          <div className="memberCard">
+            <img src={teamMember.img} alt={teamMember.name} />
+            <div className="memberData">
+              <h3>Name: {teamMember.name}</h3>
+              <span>Role: {teamMember.role}</span>
+              <a target="_blank" rel="noreferrer" href={teamMember.contact}>
+                LinkedIn: {teamMember.contact}
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+      ;{/* <i onClick={(e) => handleClick(e)}>About Us</i> */}
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

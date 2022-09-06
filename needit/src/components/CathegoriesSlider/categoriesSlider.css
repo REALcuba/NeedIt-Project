@@ -2,23 +2,17 @@
     /* width: 100%; */
     background-color: white;
 
-    height: 352px;
-    display: block;
-    padding: 0 50px;
+    /* height: 352px; */
+    /* display: block; */
+    padding: 0 40px;
 }
 
-.card{
-    padding: 10px;  
-    width: 200px;
- }
  
-.cardImg{
-    height: 200px;
-    width: 15em
-    
-}
 .categorySlider{
     width: 79%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .slick-track{
