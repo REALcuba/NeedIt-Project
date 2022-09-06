@@ -2,6 +2,8 @@ import React from 'react'
 import Slider from '../ProductSlider/Slider/Slider'
 
 import Searchbar from '../SearchBar/SearchBar'
+import { productdb } from './productdb'
+
 
 function productApp() {
   return(
@@ -14,6 +16,7 @@ function productApp() {
 }
 
 function ProductPage(props) {
+  
   return (
     <div className='productPageDiv'>
       <div ><Searchbar/></div>
@@ -26,7 +29,7 @@ function ProductPage(props) {
         <h2 className='card_descrption'></h2>
         <button className='card_btn'></button>
       </div>
-      <Slider/>
+      
       
     </div>
   )

@@ -1,4 +1,6 @@
 import React from "react";
+import { productdb } from "../ProductPage/productdb";
+
 // import Slider from "react-slick";
 
 // import dataSlider from "../ProductSlider/Slider/dataSlider";
@@ -13,6 +15,7 @@ export default function CategorieSlider () {
   // function NextArrow(props) {
   //   const { className, style, onClick } = props;
   //   return (
+      
   //     <div
   //       className={className}
   //       style={{ ...style, display: "block", background: "red" }}
@@ -35,6 +38,9 @@ export default function CategorieSlider () {
     return (
       <div className="categories container-fluid">
         <h2 className="display-1">Categories</h2>
+        <div>{productdb.map(item => {
+            return <div><ul><li>{item.name}</li></ul></div>
+          })}</div>
         
         <Slider/>
       </div>

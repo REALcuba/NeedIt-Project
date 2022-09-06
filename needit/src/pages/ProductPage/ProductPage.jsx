@@ -11,6 +11,7 @@ function ProductPage() {
       {/* /start your code below */}
       <h2 className='display-3'>ProductsPage</h2>
       <Slider/>
+    
       
     </div>
   )

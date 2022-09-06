@@ -27,6 +27,7 @@ export default function Slider() {
   //   }
   const handleClick = (e)=>{
     console.log(e,"click to category");
+    
   }
   return (
   

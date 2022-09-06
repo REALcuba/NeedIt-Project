@@ -15,6 +15,7 @@ import ProductPage from "./pages/ProductPage/ProductPage";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Chat from "./components/Chat/Chat";
+import CategorieSlider from "./components/CathegoriesSlider/CategoriesSlider";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/product" element={<ProductPage />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/about" element={<About />} />
+          <Route path="/categories" element={<CategorieSlider />} />
           {/* <Route path="/chat" element={<Chat />} /> */}
           
         </Routes>
