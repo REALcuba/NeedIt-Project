@@ -136,6 +136,25 @@ app.post("/auth", authenticate, (req, res) => {
     res.status(500).send({ error: error.message, isAuthenticated: false });
   }
 });
+// donate endpoint
+app.post("/donate", (req, res)=>{
+  const itemName = req.body.name;
+  const category  = req.body.category
+  const itemstatus = req.body.status;
+  const description = req.body.description;
+  const postcode = req.body.postcode;
+  const itemPicture = req.body.picture;
+
+  const donate = "SELECt * FROM listings WHERE name=$1";
+  const newItem = "INSERT INTO users (name,category, status,description , postcode,picture) values( $1, $2, $3, $4, $5, $6)" ; 
+ 
+  pool.query(donate, [newItem])
+.then((res) =>{
+  if(res.rows.length === 0){
+ pool.query(newItem,[itemName,category, itemstatus, description, postcode,itemPicture] )
+  }
+
+})
 
 //server port
 app.listen(PORT, () => {
