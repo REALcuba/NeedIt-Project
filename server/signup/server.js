@@ -3,9 +3,8 @@ const { Pool } = require("pg");
 const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const session = require("express-session");
-const flash = require("express-flash");
-const passport = require("passport");
+const generateJWT = require("./generateJWT");
+const authenticate = require("./authenticate");
 
 require("dotenv").config();
 
@@ -14,34 +13,17 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(bodyParser.json());
-app.use(cors());
-app.use(
-  session({
-    secret: "secret",
-
-    resave: false,
-
-    saveUninitialized: false,
-  })
-);
-
-app.use(flash());
-
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(cors()); // enable CORS
 
 //conected to postgres
 const pool = new Pool({
-  user: process.env.PGUSER,
-  host: process.env.PGHOST,
-  database: process.env.PGDATABASE,
-  password: process.env.PGPASSWORD,
-  port: process.env.PGPORT,
-  //  DATABASE_URL:'http://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}',
-
-  sslmode: true,
-  
-}); 
+  user: "realcuba",
+  host: "frankfurt-postgres.render.com",
+  database: "needit",
+  password: "Pi60WLDNGirv0prz2r6QEhroGG2YiTsH",
+  port: 5432,
+  ssl: true,
+});
 
 app.use(express.urlencoded({ extended: false }));
 
@@ -59,11 +41,14 @@ app.get("/home", (req, res) => {
     res.status(200).json(response.rows);
   });
 });
- 
+
 // POST endpoint for signup
 app.post("/users", async (req, res) => {
   // hashedpassword
-  const hashedPassword = await bcrypt.hash(req.body.password, 10);
+  const salt = await bcrypt.genSalt(10);
+  const hashedPassword = await bcrypt.hash(req.body.password, salt);
+
+  // requstting data
   const userName = req.body.name;
   const userEmail = req.body.email;
   const userCity = req.body.city;
@@ -89,7 +74,7 @@ app.post("/users", async (req, res) => {
             userpassword,
           ])
 
-          .then(() => res.send("user created"))
+          .then(() => res.send({ message: "user created" }))
           .catch((error) => console.log("Something is wrong " + error));
       } else {
         // Repeated name
@@ -100,42 +85,59 @@ app.post("/users", async (req, res) => {
 });
 
 //Login endpoint
-app.post("/users/login", (req, res) => {
+app.post("/login", async (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
-  // check if the user exsit
-  pool.query(
-    "SELECT * FROM signup WHERE email = $1",
-    [email],
-    (err, results) => {
-      if (err) {
-        throw err;
-      }
-      console.log(results.rows);
+  try {
+    const user = await pool
+      .query(`SELECT * FROM signup WHERE email ='${email}'`)
+      .then((result) => result.rows)
+      .catch((e) => e);
 
-      if (results.rows.lenght > 0) {
-        const user = results.rows[0];
-
-        bcrypt.compare(password, user.password, (err, isMatch) => {
-          if (err) {
-            throw err;
-          }
-
-          if (isMatch) {
-            res.send(null, user);
-          } else {
-            res.send(null, false, { message: "Password is incorect" });
-          }
-        });
-      } else {
-        res.send(null, false, { message: "Email is not registered" });
-      }
+    console.log(user);
+    if (user.length === 0) {
+      return res
+        .status(401)
+        .json({ error: "Invalid Credential", isAuthenticated: false });
     }
-  );
+
+    const isValidPassword = await bcrypt.compare(password, user[0].password);
+
+    if (!isValidPassword) {
+      return res
+        .status(401)
+        .json({ error: "Email or Password incorrect", isAuthenticated: false });
+    }
+    console.log(user[0].id);
+    const jwtToken = generateJWT(user[0].id);
+
+    return res
+      .status(200)
+      .send({
+        message: " You are logged in!",
+        jwtToken,
+        isAuthenticated: true,
+      });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send({ error: error.message });
+  }
+});
+
+// user authorization
+app.post("/auth", authenticate, (req, res) => {
+  try {
+    res
+      .status(200)
+      .send({ message: " You are logged in!", isAuthenticated: true });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send({ error: error.message, isAuthenticated: false });
+  }
 });
 
 //server port
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
-}); 
+});
