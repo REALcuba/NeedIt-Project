@@ -46,3 +46,8 @@ button {
   font-weight: bold;
   margin: 15px;
 }
+.text-success {
+  background-color: #e4eeee;
+  font-size: 20px;
+  color: black;
+}

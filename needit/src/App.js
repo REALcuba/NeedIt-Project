@@ -32,6 +32,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Basket />}/>
+          <Route path="/donate" element={<Donate />}/>
           {/* <Route path="/chat" element={<Chat />} /> */}
           
         </Routes>
