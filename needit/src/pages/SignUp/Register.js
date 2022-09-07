@@ -1,18 +1,20 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./style.css";
 
 function Signup() {
+  const navigate = useNavigate();
+
   const [usernameReg, setUsernameReg] = useState("");
   const [emailReg, setEmailReg] = useState("");
   const [cityReg, setcityReg] = useState("");
   const [countryReg, setcountryReg] = useState("");
   const [usernamesReg, setusernamsReg] = useState("");
   const [passwordReg, setpasswordReg] = useState("");
+  const [rigisterError, setRigester] = useState(false);
 
   const Register = (e) => {
-    console.log("form is executed");
     e.preventDefault();
 
     // to clear the input after submited
@@ -33,6 +35,7 @@ function Signup() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        setRigester(true);
       });
   };
 
@@ -45,7 +48,6 @@ function Signup() {
       >
         <h1>Sign Up</h1>
         <h3>Enter your personal details</h3>
-        
 
         <input
           className="form-control"
@@ -57,7 +59,6 @@ function Signup() {
             setUsernameReg(e.target.value);
           }}
         ></input>
-       
 
         <input
           className="form-control"
@@ -115,8 +116,13 @@ function Signup() {
         ></input>
 
         <button type="submit">Sign Up</button>
-
-        <Link to="/login"> Already registered? Login here</Link>
+        {rigisterError ? (
+          <p className="text-success">
+            <Link to="/login"> Successfully registered! Login here</Link>
+          </p>
+        ) : (
+          <Link to="/login"> Already registered? Login here</Link>
+        )}
       </form>
     </div>
   );

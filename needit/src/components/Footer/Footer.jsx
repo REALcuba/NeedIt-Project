@@ -16,6 +16,7 @@ function Footer()  {
       </Link>
 
       <div className="migracodeDiv">
+     
         <a
           target="_blank "
           href="https://migracode.openculturalcenter.org/"

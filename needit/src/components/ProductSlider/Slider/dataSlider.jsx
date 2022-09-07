@@ -32,7 +32,7 @@ export const dataSlider = [
      width: 230,
     height: 230,
      img: 
-      "https://images.pexels.com/photos/1884584/pexels-photo-1884584.jpeg?cs=srgb&dl=pexels-tembela-bohle-1884584.jpg&fm=jpg" ,
+      "https://media.istockphoto.com/photos/american-grocery-collection-picture-id458413271?k=20&m=458413271&s=612x612&w=0&h=oaivZrNIziyaiewpEk5SZ7iKgcuOTQFVw29alWkC6iE=" ,
   route: "food"
    },
    {
@@ -41,7 +41,7 @@ export const dataSlider = [
      width: 230,
      height: 230,
      img: 
-       "https://images.pexels.com/photos/1884584/pexels-photo-1884584.jpeg?cs=srgb&dl=pexels-tembela-bohle-1884584.jpg&fm=jpg" ,
+       "https://i.ytimg.com/vi/lvfFqtsXWzA/maxresdefault.jpg" ,
   route: "fun"
    },
 
