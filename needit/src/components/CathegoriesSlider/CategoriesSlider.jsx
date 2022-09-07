@@ -39,7 +39,7 @@ export default function CategorieSlider () {
       <div className="categories container-fluid">
         <h2 className="display-1">Categories</h2>
         <div>{productdb.map(item => {
-            return <div><ul><li>{item}</li></ul></div>
+            return <div><ul><li>{item.name}</li></ul></div>
           })}</div>
         
         <Slider/>

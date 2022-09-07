@@ -17,6 +17,8 @@ import About from "./components/About/About";
 import Chat from "./components/Chat/Chat";
 import Donate from "./pages/Donate/Donate";
 import Basket from "./components/Basket/Basket.jsx"
+import CathegoriesSlider from "./components/CathegoriesSlider/CategoriesSlider";
+
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Basket />}/>
           <Route path="/donate" element={<Donate />}/>
+          <Route path="/food" element={<CathegoriesSlider />}/>
+
           {/* <Route path="/chat" element={<Chat />} /> */}
           
         </Routes>

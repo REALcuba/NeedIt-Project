@@ -9,7 +9,7 @@ function ProductPage() {
     <div className='productPageDiv container-fluid'>
       <div ><Searchbar/></div>
       {/* /start your code below */}
-      <h2 className='display-3'>ProductsPage</h2>
+      <h2 className='display-3'>Categories</h2>
       <Slider/>
     
       
