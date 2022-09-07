@@ -1,14 +1,13 @@
 .searchBar {
-  
-    height: 45px;
-    border-radius: 30px ;
-    font-size: 13px;
-    padding-left: 5px;
-    border: 1px solid rgb(237, 248, 210);
-  
+  width: auto;
+  height: 45px;
+  border-radius: 20px;
+  font-size: 13px;
+  padding-left: 5px;
+  border: 1px solid rgb(237, 248, 210);
+}
+@media (max-width: 600px) {
+  .searchBarWrapper {
+    flex-direction: column;
   }
-  @media (max-width:600px) {
-    .searchBarWrapper{
-      flex-direction: column;
-    }
-  }
+}

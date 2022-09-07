@@ -14,19 +14,18 @@
   font-family: sans-serif;
 }
 
-
 .searchSection h1 {
-  /* font-size: 6.5vw; */
+  font-size: 6vw;
   font-weight: bold;
   margin-top: 50px;
   color: #adebce;
 }
 
-/* .searchSection p {
+.searchSection p {
   font-size: 2.5vw;
-} */
+}
 .searchBarDiv {
-width: 50%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;

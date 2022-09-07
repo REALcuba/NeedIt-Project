@@ -11,7 +11,11 @@ function SearchSection() {
       <p>
         Give away things that you don't need <br></br>for those who need it
       </p>
-      <SearchBar placeholder="Search here..." data={dataSlider}/>
+      <SearchBar
+        className="SearchBar"
+        placeholder="Search here..."
+        data={dataSlider}
+      />
     </div>
   );
 }

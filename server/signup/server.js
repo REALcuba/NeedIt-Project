@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const generateJWT = require("./generateJWT");
 const authenticate = require("./authenticate");
+const fileupload = require("express-fileupload");
 
 require("dotenv").config();
 
@@ -12,17 +13,19 @@ console.log(process.env);
 const PORT = process.env.PORT || 5000;
 const app = express();
 
+//default option
 app.use(bodyParser.json());
 app.use(cors()); // enable CORS
+app.use(fileupload());
 
 //conected to postgres
 const pool = new Pool({
-  user: "realcuba",
-  host: "frankfurt-postgres.render.com",
-  database: "needit",
-  password: "Pi60WLDNGirv0prz2r6QEhroGG2YiTsH",
-  port: 5432,
-  ssl: true,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_DATADBASE,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
+  ssl: process.env.DB_SSL,
 });
 
 app.use(express.urlencoded({ extended: false }));
@@ -112,13 +115,11 @@ app.post("/login", async (req, res) => {
     console.log(user[0].id);
     const jwtToken = generateJWT(user[0].id);
 
-    return res
-      .status(200)
-      .send({
-        message: " You are logged in!",
-        jwtToken,
-        isAuthenticated: true,
-      });
+    return res.status(200).send({
+      message: " You are logged in!",
+      jwtToken,
+      isAuthenticated: true,
+    });
   } catch (error) {
     console.error(error.message);
     res.status(500).send({ error: error.message });
@@ -135,6 +136,52 @@ app.post("/auth", authenticate, (req, res) => {
     console.error(error.message);
     res.status(500).send({ error: error.message, isAuthenticated: false });
   }
+});
+
+app.get("/profile/:id", async (req, res) => {
+  const id = req.params.id;
+
+  const userById = "SELECT * FROM users WHERE id = $1";
+
+  pool
+    .query(userById, [id])
+    .then((result) => res.json(result.rows))
+    .catch((error) => console.log("Something is wrong " + error));
+});
+
+//user profile endpoint
+
+app.post("/profile", (req, res) => {
+  const userProfile = req.body.username;
+  const profileEmail = req.body.email;
+  const userBio = req.body.bio;
+  const password = req.body.password;
+  const userpicture = req.files.picture;
+  const postcode = req.body.postcode;
+
+  const profileUser = "SELECt * FROM users WHERE name=$1";
+  const newProfileUser =
+    "INSERT INTO users (username, email,picture,bio ,password, postcode) values( $1, $2, $3, $4, $5, $6,˘$7)";
+
+  pool.query(profileUser, [newProfileUser]).then((results) => {
+    if (results.rows.length === 0) {
+      pool
+        .query(newProfileUser, [
+          id,
+          userProfile,
+          profileEmail,
+          userBio,
+          userpicture,
+          password,
+          postcode,
+        ])
+        .then(() => res.send({ message: "user created" }))
+        .catch((error) => console.log("Something is wrong " + error));
+    } else if (!req.files || Object.keys(req.files).length === 0) {
+      return res.status(400).send("no file were uploaded");
+    }
+    res.send("file uploaded!");
+  });
 });
 
 //server port
