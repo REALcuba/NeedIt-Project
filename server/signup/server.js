@@ -17,12 +17,12 @@ app.use(cors()); // enable CORS
 
 //conected to postgres
 const pool = new Pool({
-  user: "realcuba",
-  host: "frankfurt-postgres.render.com",
-  database: "needit",
-  password: "Pi60WLDNGirv0prz2r6QEhroGG2YiTsH",
-  port: 5432,
-  ssl: true,
+  user: process.env.REACT_APP_DB_USER,
+  host: process.env.REACT_APP_DB_HOST,
+  database: process.env.REACT_APP_DB_PASSWORD,
+  password: process.env.REACT_APP_DB_DATADBASE,
+  port: process.env.REACT_APP_DB_PORT,
+  ssl: process.env.REACT_APP_DB_SSL,
 });
 
 app.use(express.urlencoded({ extended: false }));
