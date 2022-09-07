@@ -1,7 +1,5 @@
 import React, { useState , useRef} from "react";
-// import { Link } from "react-router-dom";
-// import SearchIcon from '@mui/icons-material/Search';
-
+import './donate.css'
 function Donate() {
 //   const [productInfo, setProductInfo] = useState("");
   const [product, setProduct] = useState("");
@@ -18,9 +16,9 @@ console.log(selectedFile);
 
   return (
     <div className="container">
-      <form className="loginmember d-flex flex-column">
+      <form className="loginmember d-flex flex-column ">
         <h1>Donate your product</h1>
-        <label for="product" class="form-label">
+        <label for="product" className=" product-label form-label d-flex justify-content-start">
           Nombre del producto:
         </label>
         <input
@@ -34,9 +32,9 @@ console.log(selectedFile);
           }}
         //   value={productInfo}
         ></input>
-<label for="status" class="form-label">
+<label for="status" className=" product-label form-label d-flex justify-content-start">
           Status:
-        </label>
+        </label >
         <input
           className="form-control"
           type="status"
@@ -47,7 +45,7 @@ console.log(selectedFile);
             console.log(status);
           }}
         ></input>
-        <label for="cathegory" class="form-label">
+        <label for="cathegory" className=" product-label form-label d-flex justify-content-start">
           Categoria:
         </label>
         <input
@@ -60,7 +58,7 @@ console.log(selectedFile);
             console.log(cathegory);
           }}
         ></input>
-        <label for="description" class="form-label">
+        <label for="description" className=" product-label form-label d-flex justify-content-start">
           Descripción:
         </label>
         <input
@@ -74,7 +72,7 @@ console.log(selectedFile);
 
           }}
         ></input>
-        <label for="pic" class="form-label">
+        <label for="pic" className=" product-label form-label d-flex justify-content-start">
           Imagen:
         </label>
         <input 
