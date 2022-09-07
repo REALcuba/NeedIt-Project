@@ -47,6 +47,11 @@ function Header() {
                 <SignUpBtn />
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="login" to="/profile">
+                Profile
+              </Link>
+            </li>
           </ul>
         ) : (
           <ul className="navbar-nav navBar_wrapper">
