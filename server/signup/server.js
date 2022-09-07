@@ -112,13 +112,11 @@ app.post("/login", async (req, res) => {
     console.log(user[0].id);
     const jwtToken = generateJWT(user[0].id);
 
-    return res
-      .status(200)
-      .send({
-        message: " You are logged in!",
-        jwtToken,
-        isAuthenticated: true,
-      });
+    return res.status(200).send({
+      message: " You are logged in!",
+      jwtToken,
+      isAuthenticated: true,
+    });
   } catch (error) {
     console.error(error.message);
     res.status(500).send({ error: error.message });
@@ -137,24 +135,38 @@ app.post("/auth", authenticate, (req, res) => {
   }
 });
 // donate endpoint
-app.post("/donate", (req, res)=>{
-  const itemName = req.body.name;
-  const category  = req.body.category
-  const itemstatus = req.body.status;
-  const description = req.body.description;
-  const postcode = req.body.postcode;
-  const itemPicture = req.body.picture;
+app
+  .post("/donate", (req, res) => {
+    //requesting data
+    const itemName = req.body.name;
+    const category = req.body.category;
+    const itemstatus = req.body.status;
+    const description = req.body.description;
+    const postcode = req.body.postcode;
+    const itemPicture = req.body.picture;
 
-  const donate = "SELECt * FROM listings WHERE name=$1";
-  const newItem = "INSERT INTO users (name,category, status,description , postcode,picture) values( $1, $2, $3, $4, $5, $6)" ; 
- 
-  pool.query(donate, [newItem])
-.then((res) =>{
-  if(res.rows.length === 0){
- pool.query(newItem,[itemName,category, itemstatus, description, postcode,itemPicture] )
-  }
+    const donate = "SELECt * FROM listings WHERE name=$1";
+    const insertNewItem =
+      "INSERT INTO users (name,category, status,description , postcode,picture) values( $1, $2, $3, $4, $5, $6)";
 
-})
+    pool
+      .query(donate, [insertNewItem]);
+      if (results.rows.length === 0) {
+        pool.query(insertNewItem, [
+          itemName,
+          category,
+          itemstatus,
+          description,
+          postcode,
+          itemPicture,
+        ])
+          .then(() => res.send({ message: "Item donated" }))
+          .catch((error) => console.log("Something is wrong " + error));
+        
+  } else {
+    // Repeated name
+    res.status(400).send('opppsss.. Something when wrong');
+  }});
 
 //server port
 app.listen(PORT, () => {
